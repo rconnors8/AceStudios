@@ -1,8 +1,13 @@
 # Ace Studios
 
 Marketing site for Ace Studios, a graphic design practice. Static HTML, CSS and
-vanilla JavaScript — no build step, no dependencies, no framework. Open
-`index.html` in a browser and it works.
+vanilla JavaScript — no dependencies, no framework. Open `index.html` in a
+browser and it works, and it deploys as-is to any static host.
+
+There is a small Python script for authoring (`tools/build.py`) that renders the
+work section from a data file, so adding a project does not mean editing markup
+by hand. It is a convenience for you, not a build step for deployment — what is
+committed is the finished HTML.
 
 The visual direction is editorial-minimal in the vein of contemporary
 film/culture studio sites: near-black ground, oversized grotesk headlines,
@@ -12,10 +17,12 @@ colour on hover. All artwork and copy in this repo are original.
 ## Structure
 
 ```
+content/projects.json The work, as data — this is what you edit
+tools/build.py        Renders the work section from that data
 index.html            Home — hero, ticker, featured work, capabilities
 work.html             Work index with discipline filters
-work/*.html           Eight project case studies
-studio.html           About, process, team, recognition
+work/*.html           One page per project (generated — do not hand-edit)
+studio.html           About, process, team
 services.html         Five disciplines + engagement models
 journal.html          Writing index + newsletter signup
 contact.html          Enquiry form and direct contacts
@@ -35,28 +42,70 @@ python3 -m http.server 8000
 
 A plain file:// open works too, but a server is closer to production.
 
-## Editing
+## Adding work
 
-**Colour, type and spacing** live as custom properties at the top of
-`assets/css/main.css` (`--ink`, `--paper`, `--accent`, `--gutter`, …). Changing
-`--accent` re-skins every hover state, tag and rule on the site.
-
-**Adding a project:** copy an existing file in `work/`, then add a card to
-`work.html` (and `index.html` if it should be featured). The card's
-`data-tags` attribute drives the filter buttons — use the same keys as the
-`data-filter` values (`identity packaging editorial digital campaign motion`).
-
-**Cover plates:** `tools/make_art.py` generates each project's 4:5 and 16:10
-SVG plates from a seeded geometric composition. Edit the `PROJECTS` list —
-slug, composition (`arcs`, `letter`, `waves`, `stripes`, `blocks`, `halftone`,
-`grid`, `rings`) and a three-colour palette — then run:
+Projects live in `content/projects.json`. You never hand-edit the work markup —
+add the data, drop the images in, and run the build. Do it a project at a time,
+whenever you have one ready.
 
 ```sh
-python3 tools/make_art.py
+python3 tools/build.py add     # answer the prompts (Enter skips anything)
+python3 tools/build.py         # re-render after editing projects.json by hand
+python3 tools/build.py list    # what is published, and which images are missing
+python3 tools/build.py drop <slug>
+python3 tools/build.py drop-demo   # delete every remaining demo project
 ```
 
-Replacing a plate with a real photograph is just swapping the file in
-`assets/img/`; cards crop to 4:5 and detail plates to 16:10.
+The build writes `work/<slug>.html` for each project, refreshes the grid on
+`work.html` and the featured cards on `index.html`, updates the project count,
+and deletes pages for projects no longer in the data file. Everything else —
+studio, services, journal, contact — is hand-edited and never touched.
+
+### Images
+
+Put them in `assets/img/` and point the project at them:
+
+| Field    | Used for              | Shape                              |
+|----------|-----------------------|------------------------------------|
+| `cover`  | the card in the grid  | cropped to 4:5, any source size    |
+| `wide`   | the page's key image  | full width, 16:10 reads best       |
+| `plates` | extra images below    | cropped to 4:5, two per row        |
+
+Cards crop with `object-fit: cover`, so an off-ratio photo still sits correctly.
+If you only have one image, set `cover` and leave `wide` out — it falls back.
+
+`plates` is how you add work in passes: ship a project with one image, then add
+more later and re-run the build.
+
+```json
+"plates": [
+  { "src": "assets/img/client-detail.jpg", "caption": "Fig. 02 — Packaging" }
+]
+```
+
+### Fields
+
+`title`, `sub`, `year`, `client`, `sector`, `services`, `deliverables` are plain
+text — write `&` not `&amp;`, the build escapes them. `lede`, `body` and `quote`
+are treated as HTML so you can use entities and inline markup. Blank fields are
+skipped rather than rendered empty, so a sparse project still looks deliberate.
+
+`tags` drives the filter buttons: `identity packaging editorial digital campaign
+motion`. `featured: true` puts a project on the home page — the two newest
+featured projects are shown.
+
+### Cover plates for projects without photography
+
+`tools/make_art.py` generates abstract geometric SVG plates. Edit its `PROJECTS`
+list — slug, composition (`arcs`, `letter`, `waves`, `stripes`, `blocks`,
+`halftone`, `grid`, `rings`) and a three-colour palette — then run
+`python3 tools/make_art.py`. The demo projects use these.
+
+## Design
+
+Colour, type and spacing are custom properties at the top of
+`assets/css/main.css` (`--ink`, `--paper`, `--accent`, `--gutter`, …). Changing
+`--accent` re-skins every hover state, tag and rule on the site.
 
 ## Notes
 
@@ -66,8 +115,15 @@ Replacing a plate with a real photograph is just swapping the file in
 - The contact form has no backend; it composes a `mailto:` handoff. Point it at
   a form service (Formspree, Basin, a serverless function) before launch — see
   the `data-contact-form` handler in `assets/js/main.js`.
-- Placeholder details to replace before launch: the studio address, phone
-  number, email domain, social links, team names and the client work itself.
+- Contact details are live: acestudios.r@gmail.com and @acestudios.ny. No
+  street address is published anywhere on the site.
+- Still placeholder: the eight demo projects (`tools/build.py drop-demo`), the
+  Team block on `studio.html`, the journal posts, and the price ranges on
+  `services.html`. The Recognition section and the home-page stats row are
+  commented out rather than filled with invented figures — uncomment and fill
+  them in when they are real.
+- `404.html` links to `/work.html` root-absolute. That is right for a custom
+  domain; on a GitHub Pages project subpath it needs the repo prefix.
 
 ## Deploying
 

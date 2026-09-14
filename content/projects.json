@@ -1,0 +1,201 @@
+[
+  {
+    "slug": "hollow-sound",
+    "title": "Hollow Sound",
+    "sub": "Record label identity",
+    "year": "2025",
+    "tags": [
+      "identity",
+      "packaging"
+    ],
+    "featured": true,
+    "cover": "assets/img/hollow-sound.svg",
+    "wide": "assets/img/hollow-sound-wide.svg",
+    "client": "Hollow Sound Recordings",
+    "sector": "Music",
+    "services": "Identity, Packaging, Art Direction",
+    "deliverables": "Wordmark, sleeve system, 12\" series, site",
+    "lede": "A record label that presses 400 copies of everything needed a system that could hold 400 different records.",
+    "body": [
+      "Hollow Sound came to us with eleven releases and eleven unrelated sleeves. The catalogue looked like a compilation of other labels. We built an identity around a single generative device: a set of concentric arcs whose spacing is driven by the length of the record, so every sleeve is different and every sleeve is obviously theirs.",
+      "The wordmark is drawn, not set &mdash; a tight grotesk with a hollowed counter in the O that reappears as the label's pressing mark on the centre labels and the spine of the box sets."
+    ],
+    "quote": "Every sleeve is different. Every sleeve is obviously theirs.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "meridian-type",
+    "title": "Meridian Type Foundry",
+    "sub": "Specimen & storefront",
+    "year": "2024",
+    "tags": [
+      "identity",
+      "digital"
+    ],
+    "featured": true,
+    "cover": "assets/img/meridian-type.svg",
+    "wide": "assets/img/meridian-type-wide.svg",
+    "client": "Meridian Type",
+    "sector": "Type design",
+    "services": "Identity, Web, Specimen design",
+    "deliverables": "Brand system, specimen book, e-commerce site",
+    "lede": "A foundry storefront where the type does the selling, and nothing else is allowed to compete with it.",
+    "body": [
+      "Meridian had a superb library and a shop that buried it under interface. We rebuilt the site around a single idea: the tester is the page. Every screen is typeset in the family you are looking at, at the size you choose, in the words you type.",
+      "The printed specimen followed &mdash; 96 pages, uncoated, one weight per spread, with the italic given the room it usually gets denied."
+    ],
+    "quote": "The tester is the page.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "northbound",
+    "title": "Northbound Coffee",
+    "sub": "Brand & packaging",
+    "year": "2025",
+    "tags": [
+      "identity",
+      "packaging"
+    ],
+    "featured": false,
+    "cover": "assets/img/northbound.svg",
+    "wide": "assets/img/northbound-wide.svg",
+    "client": "Northbound Coffee Co.",
+    "sector": "Food & drink",
+    "services": "Identity, Packaging, Signage",
+    "deliverables": "Identity, bag system, cafe signage, van livery",
+    "lede": "Twelve origins, one shelf, and a three-second window to tell them apart.",
+    "body": [
+      "The brief was retail-first: bags that read from two metres and still reward a close look. We coded each origin with a contour-line field derived from the elevation of the farm &mdash; the higher the grow, the tighter the lines.",
+      "Everything prints in two spot colours on unbleached kraft, which kept the range affordable to extend. Fourteen SKUs later it still holds."
+    ],
+    "quote": "The higher the grow, the tighter the lines.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "atlas-athletic",
+    "title": "Atlas Athletic",
+    "sub": "Launch campaign",
+    "year": "2024",
+    "tags": [
+      "campaign",
+      "motion"
+    ],
+    "featured": false,
+    "cover": "assets/img/atlas-athletic.svg",
+    "wide": "assets/img/atlas-athletic-wide.svg",
+    "client": "Atlas Athletic",
+    "sector": "Sportswear",
+    "services": "Art Direction, Campaign, Motion",
+    "deliverables": "Campaign system, OOH, film titles, social",
+    "lede": "A launch campaign built to survive being cropped, compressed and reposted.",
+    "body": [
+      "We designed the campaign as a set of rules rather than a set of layouts: a fixed diagonal, a locked type scale, and one colour that never appears anywhere else in the category.",
+      "The result runs from a 48-sheet billboard down to a 1080&times;1080 crop without redrawing, which is what let the client ship six markets in eleven weeks."
+    ],
+    "quote": "Rules, not layouts. That is what survives a crop.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "verso-press",
+    "title": "Verso Press",
+    "sub": "Book series design",
+    "year": "2023",
+    "tags": [
+      "editorial"
+    ],
+    "featured": false,
+    "cover": "assets/img/verso-press.svg",
+    "wide": "assets/img/verso-press-wide.svg",
+    "client": "Verso Press",
+    "sector": "Publishing",
+    "services": "Editorial, Series design",
+    "deliverables": "Series identity, 22 covers, interior system",
+    "lede": "Twenty-two titles that had to look like a library, not a shelf of strangers.",
+    "body": [
+      "A modernist series grid: one geometric plate per title, drawn from the book's subject, sitting in a fixed field with the author's name always in the same place.",
+      "Booksellers can stack them in any order and the spines still build a pattern. That was the whole argument for the format, and it sold the series in."
+    ],
+    "quote": "Stack them in any order &mdash; the spines still build a pattern.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "field-notes",
+    "title": "Field Notes Festival",
+    "sub": "Poster series",
+    "year": "2025",
+    "tags": [
+      "campaign",
+      "editorial"
+    ],
+    "featured": false,
+    "cover": "assets/img/field-notes.svg",
+    "wide": "assets/img/field-notes-wide.svg",
+    "client": "Field Notes Festival",
+    "sector": "Culture",
+    "services": "Art Direction, Poster series, Motion",
+    "deliverables": "Key art, 30 posters, programme, screens",
+    "lede": "Three days, thirty acts, one halftone that gets denser as the weekend goes on.",
+    "body": [
+      "The system is a single dot field whose density maps to the schedule &mdash; sparse on Friday afternoon, nearly solid by Saturday night. Print it big and it is an image; print it small and it is a texture.",
+      "Each act gets its own crop of the field, so thirty posters stay individual while reading as one festival from across the street."
+    ],
+    "quote": "Print it big, it is an image. Print it small, it is a texture.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "kestrel-bank",
+    "title": "Kestrel Bank",
+    "sub": "Digital product",
+    "year": "2024",
+    "tags": [
+      "digital",
+      "identity"
+    ],
+    "featured": false,
+    "cover": "assets/img/kestrel-bank.svg",
+    "wide": "assets/img/kestrel-bank-wide.svg",
+    "client": "Kestrel",
+    "sector": "Financial services",
+    "services": "Product design, Design system, Identity",
+    "deliverables": "Design system, iOS & web app, brand refresh",
+    "lede": "A banking app for people who do not enjoy banking apps.",
+    "body": [
+      "We stripped the product back to three screens people actually use and rebuilt the design system around legibility: one typeface, four sizes, a contrast floor of 7:1 and no decorative colour anywhere near a number.",
+      "The system ships as tokens the client's engineers own, which is the only way a design system survives its first year."
+    ],
+    "quote": "No decorative colour anywhere near a number.",
+    "plates": [],
+    "demo": true
+  },
+  {
+    "slug": "salt-and-ash",
+    "title": "Salt & Ash",
+    "sub": "Restaurant identity",
+    "year": "2023",
+    "tags": [
+      "identity",
+      "print"
+    ],
+    "featured": false,
+    "cover": "assets/img/salt-and-ash.svg",
+    "wide": "assets/img/salt-and-ash-wide.svg",
+    "client": "Salt & Ash",
+    "sector": "Hospitality",
+    "services": "Identity, Print, Signage",
+    "deliverables": "Identity, menus, signage, matchbooks, uniforms",
+    "lede": "A wood-fire restaurant whose identity had to look good with a thumbprint on it.",
+    "body": [
+      "Everything is letterpressed or foiled on stock that takes a mark well, because it will get marked. The ring device is struck slightly off-register on purpose &mdash; it looks better after a service than before one.",
+      "The menu is reprinted daily in-house from a two-colour template, so the kitchen can change a dish at 4pm without calling us."
+    ],
+    "quote": "It looks better after a service than before one.",
+    "plates": [],
+    "demo": true
+  }
+]

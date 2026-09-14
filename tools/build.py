@@ -33,7 +33,7 @@ FEAT_START = "<!-- BUILD:featured:start -->"
 FEAT_END = "<!-- BUILD:featured:end -->"
 
 # Filter buttons on work.html. Keep in sync with the tags you actually use.
-TAGS = ["identity", "packaging", "editorial", "digital", "campaign", "motion"]
+TAGS = ["identity", "apparel", "advertising", "web", "typography", "print"]
 
 
 # --------------------------------------------------------------- page shell

@@ -6,7 +6,7 @@
     "year": "2025",
     "tags": [
       "identity",
-      "packaging"
+      "print"
     ],
     "featured": true,
     "cover": "assets/img/hollow-sound.svg",
@@ -17,7 +17,7 @@
     "deliverables": "Wordmark, sleeve system, 12\" series, site",
     "lede": "A record label that presses 400 copies of everything needed a system that could hold 400 different records.",
     "body": [
-      "Hollow Sound came to us with eleven releases and eleven unrelated sleeves. The catalogue looked like a compilation of other labels. We built an identity around a single generative device: a set of concentric arcs whose spacing is driven by the length of the record, so every sleeve is different and every sleeve is obviously theirs.",
+      "Hollow Sound came to me with eleven releases and eleven unrelated sleeves. The catalogue looked like a compilation of other labels. I built an identity around a single generative device: a set of concentric arcs whose spacing is driven by the length of the record, so every sleeve is different and every sleeve is obviously theirs.",
       "The wordmark is drawn, not set &mdash; a tight grotesk with a hollowed counter in the O that reappears as the label's pressing mark on the centre labels and the spine of the box sets."
     ],
     "quote": "Every sleeve is different. Every sleeve is obviously theirs.",
@@ -30,8 +30,8 @@
     "sub": "Specimen & storefront",
     "year": "2024",
     "tags": [
-      "identity",
-      "digital"
+      "typography",
+      "web"
     ],
     "featured": true,
     "cover": "assets/img/meridian-type.svg",
@@ -42,7 +42,7 @@
     "deliverables": "Brand system, specimen book, e-commerce site",
     "lede": "A foundry storefront where the type does the selling, and nothing else is allowed to compete with it.",
     "body": [
-      "Meridian had a superb library and a shop that buried it under interface. We rebuilt the site around a single idea: the tester is the page. Every screen is typeset in the family you are looking at, at the size you choose, in the words you type.",
+      "Meridian had a superb library and a shop that buried it under interface. I rebuilt the site around a single idea: the tester is the page. Every screen is typeset in the family you are looking at, at the size you choose, in the words you type.",
       "The printed specimen followed &mdash; 96 pages, uncoated, one weight per spread, with the italic given the room it usually gets denied."
     ],
     "quote": "The tester is the page.",
@@ -55,8 +55,7 @@
     "sub": "Brand & packaging",
     "year": "2025",
     "tags": [
-      "identity",
-      "packaging"
+      "identity"
     ],
     "featured": false,
     "cover": "assets/img/northbound.svg",
@@ -67,7 +66,7 @@
     "deliverables": "Identity, bag system, cafe signage, van livery",
     "lede": "Twelve origins, one shelf, and a three-second window to tell them apart.",
     "body": [
-      "The brief was retail-first: bags that read from two metres and still reward a close look. We coded each origin with a contour-line field derived from the elevation of the farm &mdash; the higher the grow, the tighter the lines.",
+      "The brief was retail-first: bags that read from two metres and still reward a close look. I coded each origin with a contour-line field derived from the elevation of the farm &mdash; the higher the grow, the tighter the lines.",
       "Everything prints in two spot colours on unbleached kraft, which kept the range affordable to extend. Fourteen SKUs later it still holds."
     ],
     "quote": "The higher the grow, the tighter the lines.",
@@ -80,8 +79,8 @@
     "sub": "Launch campaign",
     "year": "2024",
     "tags": [
-      "campaign",
-      "motion"
+      "advertising",
+      "apparel"
     ],
     "featured": false,
     "cover": "assets/img/atlas-athletic.svg",
@@ -92,7 +91,7 @@
     "deliverables": "Campaign system, OOH, film titles, social",
     "lede": "A launch campaign built to survive being cropped, compressed and reposted.",
     "body": [
-      "We designed the campaign as a set of rules rather than a set of layouts: a fixed diagonal, a locked type scale, and one colour that never appears anywhere else in the category.",
+      "I designed the campaign as a set of rules rather than a set of layouts: a fixed diagonal, a locked type scale, and one colour that never appears anywhere else in the category.",
       "The result runs from a 48-sheet billboard down to a 1080&times;1080 crop without redrawing, which is what let the client ship six markets in eleven weeks."
     ],
     "quote": "Rules, not layouts. That is what survives a crop.",
@@ -105,7 +104,8 @@
     "sub": "Book series design",
     "year": "2023",
     "tags": [
-      "editorial"
+      "print",
+      "typography"
     ],
     "featured": false,
     "cover": "assets/img/verso-press.svg",
@@ -129,8 +129,8 @@
     "sub": "Poster series",
     "year": "2025",
     "tags": [
-      "campaign",
-      "editorial"
+      "advertising",
+      "print"
     ],
     "featured": false,
     "cover": "assets/img/field-notes.svg",
@@ -154,7 +154,7 @@
     "sub": "Digital product",
     "year": "2024",
     "tags": [
-      "digital",
+      "web",
       "identity"
     ],
     "featured": false,
@@ -166,7 +166,7 @@
     "deliverables": "Design system, iOS & web app, brand refresh",
     "lede": "A banking app for people who do not enjoy banking apps.",
     "body": [
-      "We stripped the product back to three screens people actually use and rebuilt the design system around legibility: one typeface, four sizes, a contrast floor of 7:1 and no decorative colour anywhere near a number.",
+      "I stripped the product back to three screens people actually use and rebuilt the design system around legibility: one typeface, four sizes, a contrast floor of 7:1 and no decorative colour anywhere near a number.",
       "The system ships as tokens the client's engineers own, which is the only way a design system survives its first year."
     ],
     "quote": "No decorative colour anywhere near a number.",
@@ -192,7 +192,7 @@
     "lede": "A wood-fire restaurant whose identity had to look good with a thumbprint on it.",
     "body": [
       "Everything is letterpressed or foiled on stock that takes a mark well, because it will get marked. The ring device is struck slightly off-register on purpose &mdash; it looks better after a service than before one.",
-      "The menu is reprinted daily in-house from a two-colour template, so the kitchen can change a dish at 4pm without calling us."
+      "The menu is reprinted daily in-house from a two-colour template, so the kitchen can change a dish at 4pm without calling me."
     ],
     "quote": "It looks better after a service than before one.",
     "plates": [],

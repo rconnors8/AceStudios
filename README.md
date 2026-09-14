@@ -1,6 +1,8 @@
 # Ace Studios
 
-Marketing site for Ace Studios, a graphic design practice. Static HTML, CSS and
+Marketing site for Ace Studios, a one-person graphic design practice in New
+York — logos and brand identity, clothing and merch graphics, advertising, web
+design, typography and print. Static HTML, CSS and
 vanilla JavaScript — no dependencies, no framework. Open `index.html` in a
 browser and it works, and it deploys as-is to any static host.
 
@@ -90,8 +92,8 @@ text — write `&` not `&amp;`, the build escapes them. `lede`, `body` and `quot
 are treated as HTML so you can use entities and inline markup. Blank fields are
 skipped rather than rendered empty, so a sparse project still looks deliberate.
 
-`tags` drives the filter buttons: `identity packaging editorial digital campaign
-motion`. `featured: true` puts a project on the home page — the two newest
+`tags` drives the filter buttons: `identity apparel advertising web typography
+print`. `featured: true` puts a project on the home page — the two newest
 featured projects are shown.
 
 ### Cover plates for projects without photography
@@ -117,11 +119,14 @@ Colour, type and spacing are custom properties at the top of
   the `data-contact-form` handler in `assets/js/main.js`.
 - Contact details are live: acestudios.r@gmail.com and @acestudios.ny. No
   street address is published anywhere on the site.
+- The site is written as a one-person practice that brings in collaborators per
+  project. Services lead with logos, clothing graphics and advertising, then web,
+  typography and print.
 - Still placeholder: the eight demo projects (`tools/build.py drop-demo`), the
-  Team block on `studio.html`, the journal posts, and the price ranges on
-  `services.html`. The Recognition section and the home-page stats row are
-  commented out rather than filled with invented figures — uncomment and fill
-  them in when they are real.
+  journal posts, and your name — `studio.html` has a comment marking where it
+  goes. The Recognition section and the home-page stats row are commented out
+  rather than filled with invented figures. `services.html` describes fixed-price
+  quoting instead of listing rates; there is a comment where rates would go.
 - `404.html` links to `/work.html` root-absolute. That is right for a custom
   domain; on a GitHub Pages project subpath it needs the repo prefix.
 

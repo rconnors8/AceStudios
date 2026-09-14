@@ -165,13 +165,21 @@ def replace_region(path, start, end, content):
 
 # --------------------------------------------------------------- rendering
 
+def fit_bits(p, base):
+    """Projects can ask for their artwork to be shown whole rather than cropped."""
+    cls = " " + base + "--contain" if p.get("fit") == "contain" else ""
+    bg = ' style="background:%s"' % esc(p["bg"]) if p.get("bg") else ""
+    return cls, bg
+
+
 def card(p, depth=0, wide=False):
     b = "../" * depth
     src = wide_of(p) if wide else cover_of(p)
     cls = "card card--wide" if wide else "card"
     tags = " ".join(p.get("tags", []))
+    fcls, fbg = fit_bits(p, "card__frame")
     return f'''      <a class="{cls} reveal" href="{b}work/{p['slug']}.html" data-tags="{esc(tags)}">
-        <span class="card__frame"><img src="{b}{src}" alt="{esc(p['title'])} &mdash; {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
+        <span class="card__frame{fcls}"{fbg}><img src="{b}{src}" alt="{esc(p['title'])} &mdash; {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
         <span class="card__meta"><span><span class="card__title">{esc(p['title'])}</span><span class="card__sub">{esc(p.get('sub', ''))}</span></span><span class="card__year">{esc(p.get('year', ''))}</span></span>
       </a>'''
 
@@ -186,6 +194,7 @@ def spec_rows(p):
 
 
 def project_page(p, nxt):
+    pcls, pbg = fit_bits(p, "plate")
     paras = "\n          ".join(f"<p>{para}</p>" for para in p.get("body", []))
     prose = f'''      <div style="grid-column: 6 / span 7" class="reveal prose" data-delay="80">
           {paras}
@@ -208,7 +217,7 @@ def project_page(p, nxt):
     plate_block = ""
     if plates:
         cells = "\n".join(
-            f'''      <div class="plate reveal"{' data-delay="90"' if i % 2 else ''}><img src="../{pl['src']}" alt="{esc(pl.get('caption', p['title']))}" loading="lazy"><p class="plate__cap">{pl.get('caption', '')}</p></div>'''
+            f'''      <div class="plate{pcls} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}><img src="../{pl['src']}" alt="{esc(pl.get('caption', p['title']))}" loading="lazy"><p class="plate__cap">{pl.get('caption', '')}</p></div>'''
             for i, pl in enumerate(plates))
         plate_block = f'''
   <section class="wrap section--tight">
@@ -242,7 +251,7 @@ def project_page(p, nxt):
   </section>
 
   <section class="wrap">
-    <div class="plate reveal">
+    <div class="plate{pcls} reveal"{pbg}>
       <img src="../{wide_of(p)}" alt="{esc(p['title'])} &mdash; key image">
     </div>
   </section>

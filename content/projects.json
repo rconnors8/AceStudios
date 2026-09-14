@@ -197,5 +197,62 @@
     "quote": "It looks better after a service than before one.",
     "plates": [],
     "demo": true
+  },
+  {
+    "slug": "jean-dawson",
+    "title": "Jean Dawson Collection",
+    "sub": "Apparel & poster series",
+    "year": "2025",
+    "tags": [
+      "apparel",
+      "print",
+      "advertising"
+    ],
+    "featured": true,
+    "fit": "contain",
+    "bg": "#ffffff",
+    "cover": "assets/img/jean-dawson-09.jpg",
+    "wide": "assets/img/jean-dawson-06.jpg",
+    "sector": "Music &mdash; conceptual",
+    "services": "Art direction, Apparel graphics, Poster design, Lettering",
+    "deliverables": "Two tee graphics, four posters, collection graphics",
+    "lede": "A self-initiated collection built around one artist&rsquo;s visual world &mdash; garment graphics, posters and cut-up illustration running on a single printing language.",
+    "body": [
+      "The starting question was what a run of merch would look like if it were designed the way a record sleeve is designed, rather than as a licensing exercise. Everything in the collection is built from the same kit: halftone and risograph texture, cut-up photography, and lettering drawn by hand instead of set.",
+      "Two garments anchor it. A washed green tee carries a drawn football helmet, its facemask broken into a spectrum; a washed black tee carries a photo collage under graffiti-weight lettering. Both graphics are built for the wash &mdash; heavy texture and open mid-tones, so the print reads worn rather than new on the first day.",
+      "The posters run on tight palettes: one green, one orange, one single-colour collage, and a four-colour sheet that pulls the whole series together. Held to a few inks each, they hang as a set on a wall while every sheet still stands on its own.",
+      "<strong>A self-initiated, conceptual project.</strong> Ace Studios is not affiliated with, or commissioned by, Jean Dawson &mdash; these designs are a personal exploration, made as a study of the artist&rsquo;s work."
+    ],
+    "quote": "Designed the way a record sleeve is designed, not as a licensing exercise.",
+    "plates": [
+      {
+        "src": "assets/img/jean-dawson-01.jpg",
+        "caption": "Fig. 01 — Collection title card"
+      },
+      {
+        "src": "assets/img/jean-dawson-02.jpg",
+        "caption": "Fig. 02 — Pixel Rain poster"
+      },
+      {
+        "src": "assets/img/jean-dawson-08.jpg",
+        "caption": "Fig. 03 — Collage poster, single colour"
+      },
+      {
+        "src": "assets/img/jean-dawson-05.jpg",
+        "caption": "Fig. 04 — Show poster, in situ"
+      },
+      {
+        "src": "assets/img/jean-dawson-03.jpg",
+        "caption": "Fig. 05 — Tee graphic, washed green"
+      },
+      {
+        "src": "assets/img/jean-dawson-07.jpg",
+        "caption": "Fig. 06 — Tee graphic, washed black"
+      },
+      {
+        "src": "assets/img/jean-dawson-04.jpg",
+        "caption": "Fig. 07 — Collection graphic"
+      }
+    ]
   }
 ]

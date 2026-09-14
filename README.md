@@ -109,6 +109,37 @@ Colour, type and spacing are custom properties at the top of
 `assets/css/main.css` (`--ink`, `--paper`, `--accent`, `--gutter`, …). Changing
 `--accent` re-skins every hover state, tag and rule on the site.
 
+### The moving background
+
+`assets/js/background.js` draws a canvas field behind the whole site: soft
+colour blobs and crisp dots, each on its own depth layer. They move against the
+scroll, drift slowly on their own, and ease away from the cursor.
+
+Everything is tuned in the `SETTINGS` object at the top of that file:
+
+| Setting | What it does |
+|---------------------|-------------------------------------------------|
+| `parallax` | how hard the field moves against scroll; `0` pins it still |
+| `drift` | idle movement when nothing is happening |
+| `pointerRadius` | how close the cursor gets before dots react |
+| `pointerPush` | how far the cursor shoves a dot |
+| `dotAlpha` | `[min, max]` dot opacity |
+| `blobAlpha` | colour-field opacity — raise carefully, this is what muddies type |
+| `maxDots` | ceiling on dot count |
+
+It is deliberately faint: on a portfolio the background must lose to the work.
+If you turn `blobAlpha` up much past `0.1` the colour starts washing over the
+headlines and the type stops looking crisp.
+
+To switch it off for one page, put `data-bg="off"` on that page's `<html>` tag.
+
+It looks after itself in a few ways: the blob sprites are rendered once and
+blitted rather than rebuilt every frame, the loop pauses when the tab is hidden,
+dot count scales down on phones, cursor tracking is skipped for touch so it
+never fights scrolling, and `prefers-reduced-motion` paints a single static
+frame instead of animating. With JavaScript off the canvas simply never
+appears and the site looks exactly as it did before.
+
 ## Notes
 
 - Scroll reveals are gated behind a `.js` class on `<html>`, so the site stays

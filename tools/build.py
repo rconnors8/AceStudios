@@ -105,6 +105,7 @@ FOOT = '''</main>
   </div>
 </footer>
 
+<script src="{b}assets/js/background.js"></script>
 <script src="{b}assets/js/main.js"></script>
 </body>
 </html>

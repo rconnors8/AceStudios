@@ -15,11 +15,11 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "img")
 PROJECTS = [
     ("hollow-sound",   "arcs",    ("#101014", "#f4f2ed", "#ff4b1f")),
     ("meridian-type",  "letter",  ("#f4f2ed", "#0b0b0c", "#2b4cff")),
-    ("northbound",     "waves",   ("#123227", "#eae6da", "#d8ff3e")),
+    ("northbound",     "waves",   ("#14161f", "#eae6da", "#ff8a3d")),
     ("atlas-athletic", "stripes", ("#0b0b0c", "#f4f2ed", "#ff4b1f")),
     ("verso-press",    "blocks",  ("#e7e2d6", "#141416", "#c8462c")),
     ("field-notes",    "halftone",("#1b1440", "#f0ecff", "#ff9ecd")),
-    ("kestrel-bank",   "grid",    ("#f0efeb", "#0b0b0c", "#0f6b4f")),
+    ("kestrel-bank",   "grid",    ("#f0efeb", "#0b0b0c", "#2b4cff")),
     ("salt-and-ash",   "rings",   ("#211a16", "#f2e9dd", "#e07a3c")),
 ]
 

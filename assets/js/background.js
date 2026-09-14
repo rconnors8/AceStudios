@@ -21,7 +21,7 @@
   };
 
   // pulled from the palette used by the cover plates
-  var HUES = ['255, 75, 31', '43, 76, 255', '216, 255, 62', '224, 122, 60'];
+  var HUES = ['255, 75, 31', '43, 76, 255', '224, 122, 60'];
   // large fields use the warmer/cooler hues only; lime is too loud at this size
   var BLOB_HUES = ['255, 75, 31', '43, 76, 255', '224, 122, 60'];
   var PAPER = '244, 242, 237';

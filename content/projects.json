@@ -8,7 +8,7 @@
       "identity",
       "print"
     ],
-    "featured": true,
+    "featured": false,
     "cover": "assets/img/hollow-sound.svg",
     "wide": "assets/img/hollow-sound-wide.svg",
     "client": "Hollow Sound Recordings",
@@ -33,7 +33,7 @@
       "typography",
       "web"
     ],
-    "featured": true,
+    "featured": false,
     "cover": "assets/img/meridian-type.svg",
     "wide": "assets/img/meridian-type-wide.svg",
     "client": "Meridian Type",
@@ -252,6 +252,68 @@
       {
         "src": "assets/img/jean-dawson-04.jpg",
         "caption": "Fig. 07 | Collection graphic"
+      }
+    ]
+  },
+  {
+    "slug": "lacuna",
+    "title": "Lacuna",
+    "sub": "Streetwear graphics",
+    "year": "2023",
+    "tags": [
+      "apparel",
+      "typography"
+    ],
+    "featured": true,
+    "cover": "assets/img/lacuna-hoodie.jpg",
+    "wide": "assets/img/lacuna-lookbook.jpg",
+    "services": "Apparel graphics, Lettering, Art direction",
+    "deliverables": "Hoodie and tee graphics, wordmark, lookbook",
+    "lede": "A streetwear line built on one hand-drawn wordmark, stretched across hoodies, tees and a lookbook.",
+    "body": [
+      "The wordmark is drawn rather than set - a fast, marker-weight script that runs wide across a hoodie back, sits small at a tee hem, and wraps a globe on a back print without losing its hand.",
+      "The tee graphic pushes the other way: a swollen display letterform screened as an open halftone in a single green, with EMBRACE THE VOID set under it in a thin grotesk and deliberately knocked out of alignment.",
+      "Everything is drawn for garment-dyed blanks. Open halftones and mid-weight coverage settle into the wash rather than sitting on top of it, so the print reads worn from the first day."
+    ],
+    "quote": "Drawn rather than set, so it keeps its hand at any size.",
+    "plates": [
+      {
+        "src": "assets/img/lacuna-tee-front.jpg",
+        "caption": "Fig. 01 | Tee graphic, front"
+      },
+      {
+        "src": "assets/img/lacuna-tee-back.jpg",
+        "caption": "Fig. 02 | Globe back print"
+      }
+    ]
+  },
+  {
+    "slug": "480-bc",
+    "title": "480 BC",
+    "sub": "Apparel graphics",
+    "year": "2023",
+    "tags": [
+      "apparel",
+      "typography"
+    ],
+    "featured": true,
+    "fit": "contain",
+    "bg": "#ffffff",
+    "cover": "assets/img/480-tee.jpg",
+    "wide": "assets/img/480-shorts-gorilla.jpg",
+    "services": "Apparel graphics, Logo design",
+    "deliverables": "Tee and shorts graphics, brand mark",
+    "lede": "An apparel capsule built around the Battle of Thermopylae, with line-drawn armour and a mark cut from the same hand.",
+    "body": [
+      "The mark is a compressed, angular 480 that reads as much like a sigil as a number. It sits small on the chest, large on the leg, and holds at either size because the strokes are cut at a single angle.",
+      "The garment graphics are all line: a helmet drawn in one weight and broken so it wraps the side seam of the tee, and a pair of gorillas squared off across the front of the shorts. A second colourway drops the contrast to a tonal print on black.",
+      "A block of text about the battle is set small at the hem. It gives the capsule its name and does the explaining, so the graphics do not have to."
+    ],
+    "quote": "The text at the hem does the explaining, so the graphics do not have to.",
+    "plates": [
+      {
+        "src": "assets/img/480-shorts-helmet.jpg",
+        "caption": "Fig. 01 | Shorts, tonal colourway"
       }
     ]
   }

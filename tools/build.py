@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render the work section from content/projects.json.
 
-The site stays plain static HTML — this script just saves you from hand-editing
+The site stays plain static HTML - this script just saves you from hand-editing
 markup every time you add a project.
 
     python3 tools/build.py                 # re-render everything
@@ -15,7 +15,7 @@ It writes:
   - work.html                  the filterable grid (between the BUILD markers)
   - index.html                 the featured cards (between the BUILD markers)
 
-Everything else — studio, services, journal, contact — is hand-edited and is
+Everything else - studio, services, journal, contact - is hand-edited and is
 never touched by this script.
 """
 
@@ -89,7 +89,7 @@ FOOT = '''</main>
       </div>
       <div>
         <h3>Elsewhere</h3>
-        <ul><li><a href="https://www.instagram.com/acestudios.ny/" rel="me noopener" target="_blank">Instagram &mdash; @acestudios.ny</a></li></ul>
+        <ul><li><a href="https://www.instagram.com/acestudios.ny/" rel="me noopener" target="_blank">Instagram | @acestudios.ny</a></li></ul>
       </div>
       <div>
         <h3>Index</h3>
@@ -99,7 +99,7 @@ FOOT = '''</main>
 
     <div class="colophon">
       <span>&copy; <span data-year>2025</span> Ace Studios</span>
-      <span data-clock>&mdash;</span>
+      <span data-clock>-</span>
       <span>Set in Helvetica &amp; Times</span>
     </div>
   </div>
@@ -179,7 +179,7 @@ def card(p, depth=0, wide=False):
     tags = " ".join(p.get("tags", []))
     fcls, fbg = fit_bits(p, "card__frame")
     return f'''      <a class="{cls} reveal" href="{b}work/{p['slug']}.html" data-tags="{esc(tags)}">
-        <span class="card__frame{fcls}"{fbg}><img src="{b}{src}" alt="{esc(p['title'])} &mdash; {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
+        <span class="card__frame{fcls}"{fbg}><img src="{b}{src}" alt="{esc(p['title'])} | {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
         <span class="card__meta"><span><span class="card__title">{esc(p['title'])}</span><span class="card__sub">{esc(p.get('sub', ''))}</span></span><span class="card__year">{esc(p.get('year', ''))}</span></span>
       </a>'''
 
@@ -234,7 +234,7 @@ def project_page(p, nxt):
     <p class="eyebrow reveal">Next project</p>
     <a class="reveal" data-delay="60" href="{nxt['slug']}.html" style="display:block; margin-top:14px">
       <span class="h2" style="display:block">{esc(nxt['title'])} &rarr;</span>
-      <span class="card__sub" style="display:block; margin-top:10px">{esc(nxt.get('sub', ''))} &mdash; {esc(nxt.get('year', ''))}</span>
+      <span class="card__sub" style="display:block; margin-top:10px">{esc(nxt.get('sub', ''))} | {esc(nxt.get('year', ''))}</span>
     </a>
   </section>
 '''
@@ -252,7 +252,7 @@ def project_page(p, nxt):
 
   <section class="wrap">
     <div class="plate{pcls} reveal"{pbg}>
-      <img src="../{wide_of(p)}" alt="{esc(p['title'])} &mdash; key image">
+      <img src="../{wide_of(p)}" alt="{esc(p['title'])} | key image">
     </div>
   </section>
 
@@ -269,8 +269,8 @@ def project_page(p, nxt):
 {quote}{plate_block}{nxt_block}'''
 
     b = "../"
-    desc = (p.get("lede") or f"{p['title']} — {p.get('sub', '')}").replace('"', "'")
-    html = HEAD.format(title=esc(f"{p['title']} — Ace Studios"), desc=esc(desc), b=b) + body + FOOT.format(b=b)
+    desc = (p.get("lede") or f"{p['title']} | {p.get('sub', '')}").replace('"', "'")
+    html = HEAD.format(title=esc(f"{p['title']} | Ace Studios"), desc=esc(desc), b=b) + body + FOOT.format(b=b)
     out = os.path.join(ROOT, "work", f"{p['slug']}.html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w").write(html)
@@ -279,7 +279,7 @@ def project_page(p, nxt):
 def build():
     projects = load()
     if not projects:
-        print("content/projects.json is empty — nothing to build.")
+        print("content/projects.json is empty - nothing to build.")
         return
 
     # newest first, so the grid reorders itself as you add work
@@ -324,7 +324,7 @@ def cmd_add():
         val = input(f"{label}{f' [{default}]' if default else ''}: ").strip()
         return val or default
 
-    print("\nNew project — press Enter to skip anything you do not have yet.\n")
+    print("\nNew project - press Enter to skip anything you do not have yet.\n")
     title = ask("Project / client name")
     if not title:
         raise SystemExit("A name is required.")
@@ -351,7 +351,7 @@ def cmd_add():
         "quote": "",
         "plates": [],
     }
-    print("\nDescription paragraphs — blank line to finish.")
+    print("\nDescription paragraphs - blank line to finish.")
     while True:
         line = input("  > ").strip()
         if not line:

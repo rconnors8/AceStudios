@@ -1,4 +1,4 @@
-/* ACE STUDIOS — site behaviour. No dependencies. */
+/* ACE STUDIOS - site behaviour. No dependencies. */
 (function () {
   'use strict';
 
@@ -88,7 +88,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = new FormData(form);
-      var subject = 'New project enquiry — ' + (data.get('company') || data.get('name') || 'Untitled');
+      var subject = 'New project enquiry - ' + (data.get('company') || data.get('name') || 'Untitled');
       var body = [
         'Name: ' + (data.get('name') || ''),
         'Company: ' + (data.get('company') || ''),
@@ -102,7 +102,7 @@
         + '?subject=' + encodeURIComponent(subject)
         + '&body=' + encodeURIComponent(body);
       var note = form.querySelector('[data-form-note]');
-      if (note) note.textContent = 'Opening your mail client — if nothing happens, write to studio@acestudios.design directly.';
+      if (note) note.textContent = 'Opening your mail client - if nothing happens, write to studio@acestudios.design directly.';
     });
   }
 })();

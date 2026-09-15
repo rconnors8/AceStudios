@@ -1,14 +1,14 @@
 # Ace Studios
 
 Marketing site for Ace Studios, a one-person graphic design practice in New
-York — logos and brand identity, clothing and merch graphics, advertising, web
+York - logos and brand identity, clothing and merch graphics, advertising, web
 design, typography and print. Static HTML, CSS and
-vanilla JavaScript — no dependencies, no framework. Open `index.html` in a
+vanilla JavaScript - no dependencies, no framework. Open `index.html` in a
 browser and it works, and it deploys as-is to any static host.
 
 There is a small Python script for authoring (`tools/build.py`) that renders the
 work section from a data file, so adding a project does not mean editing markup
-by hand. It is a convenience for you, not a build step for deployment — what is
+by hand. It is a convenience for you, not a build step for deployment - what is
 committed is the finished HTML.
 
 The visual direction is editorial-minimal in the vein of contemporary
@@ -19,11 +19,11 @@ colour on hover. All artwork and copy in this repo are original.
 ## Structure
 
 ```
-content/projects.json The work, as data — this is what you edit
+content/projects.json The work, as data - this is what you edit
 tools/build.py        Renders the work section from that data
-index.html            Home — hero, ticker, featured work, capabilities
+index.html            Home - hero, ticker, featured work, capabilities
 work.html             Work index with discipline filters
-work/*.html           One page per project (generated — do not hand-edit)
+work/*.html           One page per project (generated - do not hand-edit)
 studio.html           About, process, team
 services.html         Five disciplines + engagement models
 journal.html          Writing index + newsletter signup
@@ -46,7 +46,7 @@ A plain file:// open works too, but a server is closer to production.
 
 ## Adding work
 
-Projects live in `content/projects.json`. You never hand-edit the work markup —
+Projects live in `content/projects.json`. You never hand-edit the work markup -
 add the data, drop the images in, and run the build. Do it a project at a time,
 whenever you have one ready.
 
@@ -60,8 +60,8 @@ python3 tools/build.py drop-demo   # delete every remaining demo project
 
 The build writes `work/<slug>.html` for each project, refreshes the grid on
 `work.html` and the featured cards on `index.html`, updates the project count,
-and deletes pages for projects no longer in the data file. Everything else —
-studio, services, journal, contact — is hand-edited and never touched.
+and deletes pages for projects no longer in the data file. Everything else -
+studio, services, journal, contact - is hand-edited and never touched.
 
 ### Images
 
@@ -74,33 +74,33 @@ Put them in `assets/img/` and point the project at them:
 | `plates` | extra images below    | cropped to 4:5, two per row        |
 
 Cards crop with `object-fit: cover`, so an off-ratio photo still sits correctly.
-If you only have one image, set `cover` and leave `wide` out — it falls back.
+If you only have one image, set `cover` and leave `wide` out - it falls back.
 
 `plates` is how you add work in passes: ship a project with one image, then add
 more later and re-run the build.
 
 ```json
 "plates": [
-  { "src": "assets/img/client-detail.jpg", "caption": "Fig. 02 — Packaging" }
+  { "src": "assets/img/client-detail.jpg", "caption": "Fig. 02 - Packaging" }
 ]
 ```
 
 ### Fields
 
 `title`, `sub`, `year`, `client`, `sector`, `services`, `deliverables` are plain
-text — write `&` not `&amp;`, the build escapes them. `lede`, `body` and `quote`
+text - write `&` not `&amp;`, the build escapes them. `lede`, `body` and `quote`
 are treated as HTML so you can use entities and inline markup. Blank fields are
 skipped rather than rendered empty, so a sparse project still looks deliberate.
 
 `tags` drives the filter buttons: `identity apparel advertising web typography
-print`. `featured: true` puts a project on the home page — the two newest
+print`. `featured: true` puts a project on the home page - the two newest
 featured projects are shown.
 
 ### Cover plates for projects without photography
 
 `tools/make_art.py` generates abstract geometric SVG plates. Edit its `PROJECTS`
-list — slug, composition (`arcs`, `letter`, `waves`, `stripes`, `blocks`,
-`halftone`, `grid`, `rings`) and a three-colour palette — then run
+list - slug, composition (`arcs`, `letter`, `waves`, `stripes`, `blocks`,
+`halftone`, `grid`, `rings`) and a three-colour palette - then run
 `python3 tools/make_art.py`. The demo projects use these.
 
 ## Design
@@ -124,7 +124,7 @@ Everything is tuned in the `SETTINGS` object at the top of that file:
 | `pointerRadius` | how close the cursor gets before dots react |
 | `pointerPush` | how far the cursor shoves a dot |
 | `dotAlpha` | `[min, max]` dot opacity |
-| `blobAlpha` | colour-field opacity — raise carefully, this is what muddies type |
+| `blobAlpha` | colour-field opacity - raise carefully, this is what muddies type |
 | `maxDots` | ceiling on dot count |
 
 It is deliberately faint: on a portfolio the background must lose to the work.
@@ -146,7 +146,7 @@ appears and the site looks exactly as it did before.
   fully readable with JavaScript disabled or blocked.
 - `prefers-reduced-motion` disables the reveals, the marquee and smooth scroll.
 - The contact form has no backend; it composes a `mailto:` handoff. Point it at
-  a form service (Formspree, Basin, a serverless function) before launch — see
+  a form service (Formspree, Basin, a serverless function) before launch - see
   the `data-contact-form` handler in `assets/js/main.js`.
 - Contact details are live: acestudios.r@gmail.com and @acestudios.ny. No
   street address is published anywhere on the site.
@@ -154,7 +154,7 @@ appears and the site looks exactly as it did before.
   project. Services lead with logos, clothing graphics and advertising, then web,
   typography and print.
 - Still placeholder: the eight demo projects (`tools/build.py drop-demo`), the
-  journal posts, and your name — `studio.html` has a comment marking where it
+  journal posts, and your name - `studio.html` has a comment marking where it
   goes. The Recognition section and the home-page stats row are commented out
   rather than filled with invented figures. `services.html` describes fixed-price
   quoting instead of listing rates; there is a comment where rates would go.

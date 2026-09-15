@@ -1,10 +1,10 @@
-/* ACE STUDIOS — background field.
+/* ACE STUDIOS - background field.
  *
  * A canvas of soft colour blobs and crisp dots sitting behind the whole site.
  * Depth-layered: everything moves against the scroll at its own rate, drifts
  * slowly on its own, and eases away from the cursor.
  *
- * Deliberately restrained — this sits behind the work, it does not compete
+ * Deliberately restrained - this sits behind the work, it does not compete
  * with it. Tune SETTINGS below.
  */
 (function () {
@@ -27,7 +27,7 @@
   var PAPER = '244, 242, 237';
 
   // Per-page opt-out: put data-bg="off" on <html> to keep a page completely
-  // clean — useful if a piece of work needs the screen to itself.
+  // clean - useful if a piece of work needs the screen to itself.
   if (document.documentElement.getAttribute('data-bg') === 'off') return;
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

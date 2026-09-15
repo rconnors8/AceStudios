@@ -217,7 +217,7 @@ def project_page(p, nxt):
     plate_block = ""
     if plates:
         cells = "\n".join(
-            f'''      <div class="plate{pcls} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}><img src="../{pl['src']}" alt="{esc(pl.get('caption', p['title']))}" loading="lazy"><p class="plate__cap">{pl.get('caption', '')}</p></div>'''
+            f'''      <div class="plate{pcls}{' plate--full' if pl.get('full') else ''} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}><img src="../{pl['src']}" alt="{esc(pl.get('caption', p['title']))}" loading="lazy"><p class="plate__cap">{pl.get('caption', '')}</p></div>'''
             for i, pl in enumerate(plates))
         plate_block = f'''
   <section class="wrap section--tight">

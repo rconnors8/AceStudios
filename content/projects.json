@@ -262,18 +262,20 @@
     "year": "2023",
     "tags": [
       "apparel",
+      "advertising",
       "typography"
     ],
     "featured": true,
     "cover": "assets/img/lacuna-hoodie.jpg",
     "wide": "assets/img/lacuna-lookbook.jpg",
-    "services": "Apparel graphics, Lettering, Art direction",
-    "deliverables": "Hoodie and tee graphics, wordmark, lookbook",
+    "services": "Apparel graphics, Lettering, Art direction, Campaign",
+    "deliverables": "Hoodie and tee graphics, wordmark, lookbook, storefront banner",
     "lede": "A streetwear line built on one hand-drawn wordmark, stretched across hoodies, tees and a lookbook.",
     "body": [
       "The wordmark is drawn rather than set - a fast, marker-weight script that runs wide across a hoodie back, sits small at a tee hem, and wraps a globe on a back print without losing its hand.",
       "The tee graphic pushes the other way: a swollen display letterform screened as an open halftone in a single green, with EMBRACE THE VOID set under it in a thin grotesk and deliberately knocked out of alignment.",
-      "Everything is drawn for garment-dyed blanks. Open halftones and mid-weight coverage settle into the wash rather than sitting on top of it, so the print reads worn from the first day."
+      "Everything is drawn for garment-dyed blanks. Open halftones and mid-weight coverage settle into the wash rather than sitting on top of it, so the print reads worn from the first day.",
+      "The campaign banner runs the other way to the garment shots: the back print held small in a wide, warm frame with the space left open beside it, so the same artwork carries a storefront header without a crop fighting the type."
     ],
     "quote": "Drawn rather than set, so it keeps its hand at any size.",
     "plates": [
@@ -284,6 +286,11 @@
       {
         "src": "assets/img/lacuna-tee-back.jpg",
         "caption": "Fig. 02 | Globe back print"
+      },
+      {
+        "src": "assets/img/lacuna-ad.jpg",
+        "caption": "Fig. 03 | Campaign banner",
+        "full": true
       }
     ]
   },

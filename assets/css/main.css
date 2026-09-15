@@ -295,6 +295,8 @@ a { color: inherit; text-decoration: none; }
 .card:hover .card__frame--contain img,
 .card:focus-visible .card__frame--contain img { transform: scale(1.02); }
 .plate--contain img { max-width: min(100%, 760px); margin-inline: auto; }
+/* Banner-shaped artwork reads wrong at half width - let it span the row. */
+.plate--full { grid-column: 1 / -1; }
 
 /* ---------- filters ---------- */
 

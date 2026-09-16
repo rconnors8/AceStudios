@@ -367,6 +367,43 @@ a.list__row:hover { padding-left: 14px; color: var(--accent); }
   font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--paper-dim);
 }
 
+/* ---------- type specimens ---------- */
+
+.specimen { border-top: var(--rule); padding-block: clamp(26px, 4vw, 42px); }
+.specimen:first-child { border-top: 0; padding-top: 0; }
+.specimen__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.specimen__name { font-size: clamp(1rem, 1.6vw, 1.2rem); font-weight: 700; letter-spacing: -0.025em; margin: 0; }
+.specimen__meta {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--paper-dim); white-space: nowrap;
+}
+.specimen__note { font-size: .95rem; line-height: 1.55; color: #d9d6cf; max-width: 58ch; margin: 12px 0 0; }
+
+/* The sample is editable, so it needs to survive whatever gets typed into it. */
+.specimen__sample {
+  display: block;
+  margin-top: 22px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  overflow-wrap: anywhere;
+  transition: font-size .12s linear;
+}
+.specimen__sample:focus-visible { outline: 1px dashed var(--ink-line); outline-offset: 10px; }
+
+.specimen__ctl { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
+.specimen__ctl input[type="range"] {
+  flex: 1 1 auto; max-width: 300px; height: 2px; -webkit-appearance: none; appearance: none;
+  background: var(--ink-line); border-radius: 2px; cursor: ew-resize;
+}
+.specimen__ctl input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 13px; height: 13px;
+  border-radius: 50%; background: var(--accent); cursor: ew-resize;
+}
+.specimen__ctl input[type="range"]::-moz-range-thumb {
+  width: 13px; height: 13px; border: 0; border-radius: 50%; background: var(--accent); cursor: ew-resize;
+}
+
 /* ---------- forms ---------- */
 
 .field { display: grid; gap: 8px; margin-bottom: 20px; }

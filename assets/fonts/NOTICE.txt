@@ -1,0 +1,17 @@
+Fonts used in the Type Studies working set.
+
+All five families are released under the SIL Open Font License 1.1, which
+permits self-hosting and redistribution with the licence included.
+
+  Archivo Black     Omnibus-Type
+  Bebas Neue        Ryoichi Tsunekawa / Dharma Type
+  Space Grotesk     Florian Karsten
+  Instrument Serif  Instrument
+  Space Mono        Colophon Foundry
+
+Licence text: https://openfontlicense.org
+Sources: fonts.google.com
+
+Only the latin subset is included, at the weights the specimens use.
+For strict OFL compliance, drop the full licence text into this folder
+alongside the woff2 files before the site goes to a client.

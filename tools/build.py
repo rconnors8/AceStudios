@@ -29,11 +29,13 @@ DATA = os.path.join(ROOT, "content", "projects.json")
 
 GRID_START = "<!-- BUILD:work-grid:start -->"
 GRID_END = "<!-- BUILD:work-grid:end -->"
-FEAT_START = "<!-- BUILD:featured:start -->"
-FEAT_END = "<!-- BUILD:featured:end -->"
-RECENT_START = "<!-- BUILD:recent:start -->"
-RECENT_END = "<!-- BUILD:recent:end -->"
-RECENT_COUNT = 6
+# Home page sections, in order. A project lands in the first one it matches,
+# so nothing is listed twice.
+HOME_SECTIONS = [
+    ("posters", lambda p: p["slug"] in ("music-posters", "screen-posters"), True),
+    ("apparel", lambda p: "apparel" in p.get("tags", []), False),
+    ("other",   lambda p: True, False),
+]
 
 # Filter buttons on work.html. Keep in sync with the tags you actually use.
 TAGS = ["identity", "apparel", "advertising", "motion", "web", "typography", "print"]
@@ -52,7 +54,7 @@ HEAD = '''<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="{b}assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{b}assets/css/main.css">
+<link rel="stylesheet" href="{b}assets/css/main.css">{head_extra}
 <script>document.documentElement.className += " js";</script>
 </head>
 <body>
@@ -217,8 +219,50 @@ def plate_media(pl, prefix="../"):
             % (poster, alt)) + "".join(srcs) + "</video>"
 
 
+def specimen_block(p):
+    """The working type set: live samples you can resize and type into."""
+    specs = p.get("specimens") or []
+    if not specs:
+        return "", ""
+
+    head = '\n<link rel="stylesheet" href="../assets/css/fonts.css">'
+
+    rows = []
+    for i, s in enumerate(specs):
+        size = 64 if "Display" in s["category"] or "Condensed" in s["category"] else 44
+        rows.append(f'''        <div class="specimen">
+          <div class="specimen__head">
+            <p class="specimen__name">{esc(s["name"])}</p>
+            <span class="specimen__meta">{esc(s["category"])}</span>
+          </div>
+          <p class="specimen__note">{s["note"]}</p>
+          <div class="specimen__sample" id="spec{i}" contenteditable="true" spellcheck="false" role="textbox" aria-label="{esc(s["name"])} sample, editable" style="font-family:{s["family"]},var(--sans);font-weight:{s["weight"]};font-size:{size}px">{esc(s["sample"])}</div>
+          <div class="specimen__ctl">
+            <span class="specimen__meta">Size</span>
+            <input type="range" min="16" max="150" value="{size}" data-spec="spec{i}" aria-label="{esc(s["name"])} sample size">
+            <span class="specimen__meta" data-spec-label="spec{i}">{size}px</span>
+          </div>
+        </div>''')
+
+    body = '''
+  <section class="wrap section rule-top" id="working-set">
+    <div class="grid">
+      <div style="grid-column: 1 / span 4" class="reveal">
+        <p class="eyebrow">Working set</p>
+        <p class="specimen__note" style="margin-top:14px">The faces I keep coming back to, and what each one is actually for. Drag a slider to resize, or click a line and type your own words into it.</p>
+      </div>
+      <div style="grid-column: 5 / span 8" class="reveal" data-delay="80">
+''' + "\n".join(rows) + '''
+      </div>
+    </div>
+  </section>
+'''
+    return head, body
+
+
 def project_page(p, nxt):
     pcls, pbg = fit_bits(p, "plate")
+    spec_head, spec_body = specimen_block(p)
     # The opening image can be a clip. It reuses the plate media builder, so it
     # gets the same dual sources and the same playback handling as the rest.
     if p.get("hero_video"):
@@ -298,11 +342,11 @@ def project_page(p, nxt):
 {prose}
     </div>
   </section>
-{quote}{plate_block}{nxt_block}'''
+{quote}{plate_block}{spec_body}{nxt_block}'''
 
     b = "../"
     desc = (p.get("lede") or f"{p['title']} | {p.get('sub', '')}").replace('"', "'")
-    html = HEAD.format(title=esc(f"{p['title']} | Ace Studios"), desc=esc(desc), b=b) + body + FOOT.format(b=b)
+    html = HEAD.format(title=esc(f"{p['title']} | Ace Studios"), desc=esc(desc), b=b, head_extra=spec_head) + body + FOOT.format(b=b)
     out = os.path.join(ROOT, "work", f"{p['slug']}.html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w").write(html)
@@ -324,19 +368,15 @@ def build():
     replace_region("work.html", GRID_START, GRID_END,
                    "\n".join(card(p) for p in projects))
 
-    marked = [p for p in projects if p.get("featured")]
-    featured = marked[:2]
-    if len(marked) > 2:
-        skipped = ", ".join(p["slug"] for p in marked[2:])
-        print(f"note: the home page shows 2 featured projects; not shown: {skipped}")
-    replace_region("index.html", FEAT_START, FEAT_END,
-                   "\n".join(card(p, wide=True) for p in featured))
-
-    # everything not already featured above, newest first
-    shown = {p["slug"] for p in featured}
-    recent = [p for p in projects if p["slug"] not in shown][:RECENT_COUNT]
-    replace_region("index.html", RECENT_START, RECENT_END,
-                   "\n".join(card(p) for p in recent))
+    remaining = list(projects)
+    for marker, belongs, wide in HOME_SECTIONS:
+        picked = [p for p in remaining if belongs(p)]
+        remaining = [p for p in remaining if p not in picked]
+        replace_region("index.html",
+                       "<!-- BUILD:%s:start -->" % marker,
+                       "<!-- BUILD:%s:end -->" % marker,
+                       "\n".join(card(p, wide=wide) for p in picked))
+        print("  home/%-8s %d" % (marker, len(picked)))
 
     # drop pages for projects that are no longer in the data file
     for f in os.listdir(os.path.join(ROOT, "work")):
@@ -350,7 +390,7 @@ def build():
     w = re.sub(r'(<span data-count>)\d+(</span>)', rf'\g<1>{len(projects):02d}\g<2>', w)
     open(wpath, "w").write(w)
 
-    print(f"built {len(projects)} projects: {len(featured)} featured + {len(recent)} recent on the home page")
+    print(f"built {len(projects)} projects")
 
 
 # --------------------------------------------------------------- commands

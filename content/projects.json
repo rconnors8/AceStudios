@@ -1,62 +1,5 @@
 [
   {
-    "slug": "jean-dawson",
-    "title": "Jean Dawson Collection",
-    "sub": "Apparel & poster series",
-    "year": "2025",
-    "tags": [
-      "apparel",
-      "print",
-      "advertising"
-    ],
-    "featured": true,
-    "fit": "contain",
-    "bg": "#ffffff",
-    "cover": "assets/img/jean-dawson-09.jpg",
-    "wide": "assets/img/jean-dawson-06.jpg",
-    "sector": "Music | conceptual",
-    "services": "Art direction, Apparel graphics, Poster design, Lettering",
-    "deliverables": "Two tee graphics, four posters, collection graphics",
-    "lede": "A self-initiated collection built around one artist&rsquo;s visual world - garment graphics, posters and cut-up illustration running on a single printing language.",
-    "body": [
-      "The starting question was what a run of merch would look like if it were designed the way a record sleeve is designed, rather than as a licensing exercise. Everything in the collection is built from the same kit: halftone and risograph texture, cut-up photography, and lettering drawn by hand instead of set.",
-      "Two garments anchor it. A washed green tee carries a drawn football helmet, its facemask broken into a spectrum; a washed black tee carries a photo collage under graffiti-weight lettering. Both graphics are built for the wash - heavy texture and open mid-tones, so the print reads worn rather than new on the first day.",
-      "The posters run on tight palettes: one green, one orange, one single-colour collage, and a four-colour sheet that pulls the whole series together. Held to a few inks each, they hang as a set on a wall while every sheet still stands on its own.",
-      "<strong>A self-initiated, conceptual project.</strong> Ace Studios is not affiliated with, or commissioned by, Jean Dawson - these designs are a personal exploration, made as a study of the artist&rsquo;s work."
-    ],
-    "quote": "Designed the way a record sleeve is designed, not as a licensing exercise.",
-    "plates": [
-      {
-        "src": "assets/img/jean-dawson-01.jpg",
-        "caption": "Fig. 01 | Collection title card"
-      },
-      {
-        "src": "assets/img/jean-dawson-02.jpg",
-        "caption": "Fig. 02 | Pixel Rain poster"
-      },
-      {
-        "src": "assets/img/jean-dawson-08.jpg",
-        "caption": "Fig. 03 | Collage poster, single colour"
-      },
-      {
-        "src": "assets/img/jean-dawson-05.jpg",
-        "caption": "Fig. 04 | Show poster, in situ"
-      },
-      {
-        "src": "assets/img/jean-dawson-03.jpg",
-        "caption": "Fig. 05 | Tee graphic, washed green"
-      },
-      {
-        "src": "assets/img/jean-dawson-07.jpg",
-        "caption": "Fig. 06 | Tee graphic, washed black"
-      },
-      {
-        "src": "assets/img/jean-dawson-04.jpg",
-        "caption": "Fig. 07 | Collection graphic"
-      }
-    ]
-  },
-  {
     "slug": "lacuna",
     "title": "Lacuna",
     "sub": "Streetwear graphics",
@@ -141,7 +84,7 @@
     "cover": "assets/img/poster-lucki.jpg",
     "wide": "assets/img/poster-tyler.jpg",
     "services": "Art direction, Poster design, Typography",
-    "deliverables": "Twelve posters at 18x24 and 20x30",
+    "deliverables": "Sixteen posters at 18x24 and 20x30",
     "lede": "A run of artist posters at two print sizes, each built from its own typographic idea rather than a house template.",
     "body": [
       "The set is deliberately not a system. One sheet is blown out to pure black and white with the grain left in, one runs a chrome display face across a split field, one interleaves the figure between stacked letterforms so the type sits both behind and in front.",
@@ -211,6 +154,22 @@
         "src": "assets/img/poster-lucki-room.jpg",
         "caption": "Fig. 15 | In situ",
         "full": true
+      },
+      {
+        "src": "assets/img/jean-dawson-09.jpg",
+        "caption": "Fig. 16 | Collage sheet, four colour"
+      },
+      {
+        "src": "assets/img/jean-dawson-02.jpg",
+        "caption": "Fig. 17 | Halftone sheet"
+      },
+      {
+        "src": "assets/img/jean-dawson-08.jpg",
+        "caption": "Fig. 18 | Collage sheet, one colour"
+      },
+      {
+        "src": "assets/img/jean-dawson-05.jpg",
+        "caption": "Fig. 19 | Show poster, alternate colourway"
       }
     ]
   },
@@ -461,14 +420,107 @@
     "cover": "assets/img/study-newgen.jpg",
     "wide": "assets/img/study-explosion.jpg",
     "services": "Typography, Poster design",
-    "deliverables": "Poster studies",
+    "deliverables": "Poster studies, working type set",
     "lede": "Two sheets made to work a problem out rather than to sell anything.",
     "body": [
-      "The first is a grid stress test: a single column of statements broken across weights and sizes until the hierarchy nearly collapses, then pulled back one step from the edge.",
-      "The second goes the other way - layered scans, halftone and torn paper with the type buried in it, to see how little of a word can still be read once the texture is fighting it.",
-      "Neither was briefed. They exist to find the limit, which is what makes them useful on the jobs that are briefed."
+      "The first sheet is a grid stress test: a single column of statements broken across weights and sizes until the hierarchy nearly collapses, then pulled back one step from the edge.",
+      "The second goes the other way. Layered scans, halftone and torn paper with the type buried in it, to find how little of a word can still be read once the texture is fighting it.",
+      "Neither was briefed. They exist to find the limit, which is what makes them useful on the jobs that are briefed.",
+      "Below is the working set - the faces I keep coming back to, and what each one is actually for. The samples are live: drag the slider, or click the line and type your own words into it."
     ],
     "quote": "They exist to find the limit, which is what makes them useful on the jobs that are briefed.",
-    "plates": []
+    "plates": [
+      {
+        "src": "assets/img/study-newgen.jpg",
+        "caption": "Fig. 01 | Grid stress test"
+      },
+      {
+        "src": "assets/img/study-explosion.jpg",
+        "caption": "Fig. 02 | Texture over type"
+      }
+    ],
+    "specimens": [
+      {
+        "name": "Archivo Black",
+        "family": "'Archivo Black'",
+        "google": "Archivo+Black",
+        "category": "Grotesk / Display",
+        "weight": "400",
+        "note": "The workhorse for headlines. Cut tight and set large, it holds a poster on its own. It falls apart small, so it never goes below about 40px.",
+        "sample": "EARNS A SECOND LOOK"
+      },
+      {
+        "name": "Bebas Neue",
+        "family": "'Bebas Neue'",
+        "google": "Bebas+Neue",
+        "category": "Condensed / Display",
+        "weight": "400",
+        "note": "Stacks into a narrow column without losing weight. Where a sheet has to carry more words than it has room for.",
+        "sample": "SET IT LOUD"
+      },
+      {
+        "name": "Space Grotesk",
+        "family": "'Space Grotesk'",
+        "google": "Space+Grotesk:wght@400;700",
+        "category": "Grotesk / Text",
+        "weight": "400",
+        "note": "Technical without being cold. The one I reach for when a spec sheet has to sound like a brand.",
+        "sample": "Drawn, not set"
+      },
+      {
+        "name": "Instrument Serif",
+        "family": "'Instrument Serif'",
+        "google": "Instrument+Serif:ital@0;1",
+        "category": "Serif / Display",
+        "weight": "400",
+        "note": "The counterweight. One serif line against a page of grotesk does more work than another weight ever would.",
+        "sample": "Quiet on purpose"
+      },
+      {
+        "name": "Space Mono",
+        "family": "'Space Mono'",
+        "google": "Space+Mono:wght@400;700",
+        "category": "Monospace",
+        "weight": "400",
+        "note": "Captions, metadata, anything that should read as a label rather than a voice. It is the mono running across this whole site.",
+        "sample": "FIG. 01 | 18x24"
+      }
+    ]
+  },
+  {
+    "slug": "concept-apparel",
+    "title": "Concept Apparel",
+    "sub": "Conceptual graphics",
+    "year": "2025",
+    "tags": [
+      "apparel",
+      "print"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#ffffff",
+    "cover": "assets/img/jean-dawson-03.jpg",
+    "wide": "assets/img/jean-dawson-06.jpg",
+    "sector": "Music &mdash; conceptual",
+    "services": "Art direction, Apparel graphics, Illustration",
+    "deliverables": "Two tee graphics, collection artwork",
+    "lede": "Garment graphics drawn as a personal exercise: what merch looks like when it is designed like a record sleeve.",
+    "body": [
+      "Both tees are built from the same kit as the posters they sit beside - halftone and risograph texture, cut-up photography, and drawing rather than sourced imagery.",
+      "A washed green body carries a hand-drawn helmet with its facemask broken into a spectrum; a washed black body carries a photo collage under graffiti-weight lettering. Both are drawn for the wash, with heavy texture and open mid-tones so the print reads worn rather than new on the first day.",
+      "The artwork runs wider than the garments. The same cut-up figures work as standalone sheets, which is what keeps a capsule this small from looking like two shirts and nothing else.",
+      "<strong>Self-initiated.</strong> Personal studies made around an artist's work. Not commissioned, and not affiliated with or endorsed by the artist."
+    ],
+    "quote": "Designed the way a record sleeve is designed, not as a licensing exercise.",
+    "plates": [
+      {
+        "src": "assets/img/jean-dawson-07.jpg",
+        "caption": "Fig. 01 | Tee graphic, washed black"
+      },
+      {
+        "src": "assets/img/jean-dawson-04.jpg",
+        "caption": "Fig. 02 | Collection artwork"
+      }
+    ]
   }
 ]

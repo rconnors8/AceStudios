@@ -83,6 +83,30 @@
     }
   }
 
+  /* ---- type specimens: resize the sample, and keep the readout honest ---- */
+  document.querySelectorAll('input[data-spec]').forEach(function (slider) {
+    var id = slider.getAttribute('data-spec');
+    var sample = document.getElementById(id);
+    var label = document.querySelector('[data-spec-label="' + id + '"]');
+    if (!sample) return;
+    slider.addEventListener('input', function () {
+      sample.style.fontSize = slider.value + 'px';
+      if (label) label.textContent = slider.value + 'px';
+    });
+  });
+
+  /* Editable samples: keep them one line of plain text, whatever gets pasted. */
+  document.querySelectorAll('.specimen__sample[contenteditable]').forEach(function (el) {
+    el.addEventListener('paste', function (e) {
+      e.preventDefault();
+      var text = (e.clipboardData || window.clipboardData).getData('text').replace(/\s+/g, ' ');
+      document.execCommand('insertText', false, text);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); el.blur(); }
+    });
+  });
+
   /* ---- work filters ---- */
   var filters = document.querySelectorAll('[data-filter]');
   var items = document.querySelectorAll('[data-tags]');

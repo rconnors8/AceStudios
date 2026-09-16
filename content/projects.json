@@ -418,7 +418,7 @@
     "fit": "contain",
     "bg": "#141416",
     "cover": "assets/img/study-newgen.jpg",
-    "wide": "assets/img/study-explosion.jpg",
+    "wide": "assets/img/study-newgen.jpg",
     "services": "Typography, Poster design",
     "deliverables": "Poster studies, working type set",
     "lede": "Two sheets made to work a problem out rather than to sell anything.",
@@ -431,12 +431,8 @@
     "quote": "They exist to find the limit, which is what makes them useful on the jobs that are briefed.",
     "plates": [
       {
-        "src": "assets/img/study-newgen.jpg",
-        "caption": "Fig. 01 | Grid stress test"
-      },
-      {
         "src": "assets/img/study-explosion.jpg",
-        "caption": "Fig. 02 | Texture over type"
+        "caption": "Fig. 01 | Texture over type"
       }
     ],
     "specimens": [

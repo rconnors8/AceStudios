@@ -34,6 +34,9 @@ GRID_END = "<!-- BUILD:work-grid:end -->"
 # Slugs that should lead their section, whatever the date sort says.
 SECTION_LEAD = {"posters": ["music-posters"]}
 
+# How many cards each home section may show. The home page is a door, not an index.
+HOME_MAX = {"type": 1, "posters": 2, "other": 2}
+
 HOME_SECTIONS = [
     ("apparel", lambda p: "apparel" in p.get("tags", []), False),
     ("type",    lambda p: p["slug"] == "type-studies", True),
@@ -201,6 +204,14 @@ def card(p, depth=0, wide=False):
     return f'''      <a class="{cls} reveal" href="{b}work/{p['slug']}.html" data-tags="{esc(tags)}">
         <span class="card__frame{fcls}"{fbg}><img src="{b}{src}" alt="{esc(p['title'])} | {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
         <span class="card__meta"><span><span class="card__title">{esc(p['title'])}</span><span class="card__sub">{esc(p.get('sub', ''))}</span></span><span class="card__year">{esc(p.get('year', ''))}</span></span>
+      </a>'''
+
+
+def collection_card(href, img, title, sub, meta):
+    """One card standing in for a group of projects, so the home page can stay short."""
+    return f'''      <a class="card card--wide reveal" href="{href}">
+        <span class="card__frame"><img src="{img}" alt="{esc(title)}" loading="lazy"><span class="card__tag">{esc(sub)}</span></span>
+        <span class="card__meta"><span><span class="card__title">{esc(title)}</span><span class="card__sub">{esc(sub)}</span></span><span class="card__year">{esc(meta)}</span></span>
       </a>'''
 
 
@@ -390,6 +401,27 @@ def build():
         remaining = [p for p in remaining if p not in picked]
         lead = SECTION_LEAD.get(marker, [])
         picked.sort(key=lambda p: lead.index(p["slug"]) if p["slug"] in lead else len(lead))
+
+        if marker == "apparel":
+            # The whole discipline behind one card. Six shirt projects in a row
+            # buried everything else on the page.
+            replace_region("index.html",
+                           "<!-- BUILD:apparel:start -->", "<!-- BUILD:apparel:end -->",
+                           collection_card("apparel.html", "assets/img/lacuna-lookbook.jpg",
+                                           "Clothing & Merch",
+                                           "Hoodies, tees, team apparel",
+                                           "%d projects" % len(picked)))
+            replace_region("apparel.html",
+                           "<!-- BUILD:apparel-page:start -->", "<!-- BUILD:apparel-page:end -->",
+                           "\n".join(card(p) for p in picked))
+            ap = os.path.join(ROOT, "apparel.html")
+            src = open(ap).read()
+            open(ap, "w").write(re.sub(r"(<span data-count>)\d+(</span>)",
+                                       r"\g<1>%02d\g<2>" % len(picked), src))
+            print("  home/apparel  1 card -> apparel.html (%d projects)" % len(picked))
+            continue
+
+        picked = picked[:HOME_MAX.get(marker, 2)]
         replace_region("index.html",
                        "<!-- BUILD:%s:start -->" % marker,
                        "<!-- BUILD:%s:end -->" % marker,

@@ -261,7 +261,7 @@
   {
     "slug": "simply-alone",
     "title": "Simply Alone Studios",
-    "sub": "Brand &amp; campaign",
+    "sub": "Brand & campaign",
     "year": "2024",
     "tags": [
       "apparel",
@@ -650,6 +650,7 @@
         "src": "assets/img/ranch-heritage-willis.jpg",
         "caption": "Fig. 07 | Heritage print, Willis Bennett"
       }
-    ]
+    ],
+    "mark": true
   }
 ]

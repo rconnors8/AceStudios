@@ -205,6 +205,8 @@ def card(p, depth=0, wide=False):
     cls = "card card--wide" if wide else "card"
     tags = " ".join(p.get("tags", []))
     fcls, fbg = fit_bits(p, "card__frame")
+    if p.get("mark"):
+        fcls += " card__frame--mark"
     return f'''      <a class="{cls} reveal" href="{b}work/{p['slug']}.html" data-tags="{esc(tags)}">
         <span class="card__frame{fcls}"{fbg}><img src="{b}{src}" alt="{esc(p['title'])} | {esc(p.get('sub', 'project'))}" loading="lazy"><span class="card__tag">{esc(p.get('sub', ''))}</span></span>
         <span class="card__meta"><span><span class="card__title">{esc(p['title'])}</span><span class="card__sub">{esc(p.get('sub', ''))}</span></span><span class="card__year">{esc(p.get('year', ''))}</span></span>
@@ -322,6 +324,7 @@ def palette_block(p):
 
 def project_page(p, nxt):
     pcls, pbg = fit_bits(p, "plate")
+    hero_cls = pcls + (" plate--mark" if p.get("mark") else "")
     spec_head, spec_body = specimen_block(p)
     palette = palette_block(p)
     # The opening image can be a clip. It reuses the plate media builder, so it
@@ -388,7 +391,7 @@ def project_page(p, nxt):
   </section>
 
   <section class="wrap">
-    <div class="plate{pcls} reveal"{pbg}>
+    <div class="plate{hero_cls} reveal"{pbg}>
       {hero_media}
     </div>
   </section>

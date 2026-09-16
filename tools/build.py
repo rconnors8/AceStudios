@@ -31,6 +31,9 @@ GRID_START = "<!-- BUILD:work-grid:start -->"
 GRID_END = "<!-- BUILD:work-grid:end -->"
 FEAT_START = "<!-- BUILD:featured:start -->"
 FEAT_END = "<!-- BUILD:featured:end -->"
+RECENT_START = "<!-- BUILD:recent:start -->"
+RECENT_END = "<!-- BUILD:recent:end -->"
+RECENT_COUNT = 6
 
 # Filter buttons on work.html. Keep in sync with the tags you actually use.
 TAGS = ["identity", "apparel", "advertising", "motion", "web", "typography", "print"]
@@ -310,6 +313,12 @@ def build():
     replace_region("index.html", FEAT_START, FEAT_END,
                    "\n".join(card(p, wide=True) for p in featured))
 
+    # everything not already featured above, newest first
+    shown = {p["slug"] for p in featured}
+    recent = [p for p in projects if p["slug"] not in shown][:RECENT_COUNT]
+    replace_region("index.html", RECENT_START, RECENT_END,
+                   "\n".join(card(p) for p in recent))
+
     # drop pages for projects that are no longer in the data file
     for f in os.listdir(os.path.join(ROOT, "work")):
         if f.endswith(".html") and f[:-5] not in known:
@@ -322,7 +331,7 @@ def build():
     w = re.sub(r'(<span data-count>)\d+(</span>)', rf'\g<1>{len(projects):02d}\g<2>', w)
     open(wpath, "w").write(w)
 
-    print(f"built {len(projects)} projects ({len(featured)} featured on the home page)")
+    print(f"built {len(projects)} projects: {len(featured)} featured + {len(recent)} recent on the home page")
 
 
 # --------------------------------------------------------------- commands

@@ -105,7 +105,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- layout ---------- */
 
-.wrap { padding-inline: var(--gutter); }
+.wrap { padding-inline: var(--gutter); max-width: 1680px; margin-inline: auto; }
 
 .section { padding-block: clamp(56px, 10vw, 140px); }
 .section--tight { padding-block: clamp(36px, 6vw, 72px); }
@@ -245,7 +245,10 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: clamp(20px, 3vw, 44px) clamp(16px, 2.4vw, 32px);
 }
-.work-grid--feature { grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
+/* Featured cards are always a pair, so they stay large and fill the row
+   instead of auto-filling into a sparse strip on a wide monitor. */
+.work-grid--feature { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .work-grid--feature { grid-template-columns: 1fr; } }
 
 .card { display: block; position: relative; }
 .card__frame {

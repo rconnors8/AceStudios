@@ -197,13 +197,24 @@ def spec_rows(p):
 
 
 def plate_media(pl, prefix="../"):
-    """A plate holds a still, or a silent looping video with a poster frame."""
+    """A plate holds a still, or a silent looping video with a poster frame.
+
+    Two sources are emitted when both exist. MP4 goes first because it is the
+    smaller file for browsers that can take it; WebM covers the ones that
+    cannot decode H.264 at all.
+    """
     alt = esc(pl.get("caption", ""))
-    if pl.get("video"):
-        poster = f' poster="{prefix}{pl["poster"]}"' if pl.get("poster") else ""
-        return (f'<video src="{prefix}{pl["video"]}"{poster} autoplay muted loop playsinline '
-                f'preload="metadata" aria-label="{alt}"></video>')
-    return f'<img src="{prefix}{pl["src"]}" alt="{alt}" loading="lazy">'
+    if not pl.get("video"):
+        return '<img src="%s%s" alt="%s" loading="lazy">' % (prefix, pl["src"], alt)
+
+    poster = ' poster="%s%s"' % (prefix, pl["poster"]) if pl.get("poster") else ""
+    webm = pl["video"].rsplit(".", 1)[0] + ".webm"
+    srcs = []
+    for path, mime in ((pl["video"], "video/mp4"), (webm, "video/webm")):
+        if os.path.exists(os.path.join(ROOT, path)):
+            srcs.append('<source src="%s%s" type="%s">' % (prefix, path, mime))
+    return ('<video%s autoplay muted loop playsinline preload="auto" aria-label="%s">'
+            % (poster, alt)) + "".join(srcs) + "</video>"
 
 
 def project_page(p, nxt):

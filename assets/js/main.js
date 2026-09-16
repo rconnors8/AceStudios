@@ -39,13 +39,48 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---- looping video: hand control back under reduced motion ---- */
-  if (reduce) {
-    document.querySelectorAll('video[autoplay]').forEach(function (v) {
-      v.removeAttribute('autoplay');
-      v.setAttribute('controls', '');
-      v.pause();
-    });
+  /* ---- looping video ----
+     Autoplay gets refused for plenty of reasons: a power-saving mode, a browser
+     setting, a codec the machine cannot decode. When it is refused we hand back
+     native controls rather than leaving a still frame nobody can start. Clips
+     also only run while they are actually on screen. */
+  var clips = document.querySelectorAll('.plate video');
+  if (clips.length) {
+    if (reduce) {
+      clips.forEach(function (v) {
+        v.removeAttribute('autoplay');
+        v.setAttribute('controls', '');
+        v.pause();
+      });
+    } else {
+      // play() is refused if it is called before the browser has picked a
+      // source and buffered anything, which is exactly when this script runs.
+      // So the real attempt happens on canplay, and only a refusal at that
+      // point counts as blocked and earns visible controls.
+      var start = function (v, strict) {
+        var p = v.play();
+        if (p && p.catch) {
+          p.catch(function () { if (strict) { v.setAttribute('controls', ''); } });
+        }
+      };
+
+      clips.forEach(function (v) {
+        v.addEventListener('canplay', function () { start(v, true); });
+        v.addEventListener('error', function () { v.setAttribute('controls', ''); });
+        start(v, false);
+      });
+
+      // The observer only parks clips that are off screen and picks them up
+      // again on the way back.
+      if ('IntersectionObserver' in window) {
+        var vio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { start(e.target, false); } else { e.target.pause(); }
+          });
+        }, { threshold: 0.01 });
+        clips.forEach(function (v) { vio.observe(v); });
+      }
+    }
   }
 
   /* ---- work filters ---- */

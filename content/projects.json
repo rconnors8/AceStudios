@@ -286,32 +286,36 @@
     "quote": "Sell the hoodie plainly. Give the reason its own room. Never let one dress up the other.",
     "plates": [
       {
-        "src": "assets/img/sa-ad-beautiful-world.jpg",
-        "caption": "Fig. 01 | Campaign"
-      },
-      {
-        "src": "assets/img/sa-ad-awareness.jpg",
-        "caption": "Fig. 02 | Awareness frame"
+        "src": "assets/img/sa-ad-tee.jpg",
+        "caption": "Fig. 01 | Product frame, tee"
       },
       {
         "src": "assets/img/sa-ad-hoodie.jpg",
-        "caption": "Fig. 03 | Product frame"
+        "caption": "Fig. 02 | Product frame, hoodie"
+      },
+      {
+        "src": "assets/img/sa-ad-beautiful-world.jpg",
+        "caption": "Fig. 03 | Campaign"
+      },
+      {
+        "src": "assets/img/sa-ad-awareness.jpg",
+        "caption": "Fig. 04 | Awareness frame"
       },
       {
         "src": "assets/img/sa-ad-spec.jpg",
-        "caption": "Fig. 04 | Specification frame"
+        "caption": "Fig. 05 | Specification frame"
       },
       {
         "src": "assets/img/sa-ad-proceeds.jpg",
-        "caption": "Fig. 05 | Cause frame"
+        "caption": "Fig. 06 | Cause frame"
       },
       {
         "src": "assets/img/simply-alone-grey.jpg",
-        "caption": "Fig. 06 | Grey colourway"
+        "caption": "Fig. 07 | Grey colourway"
       },
       {
         "src": "assets/img/simply-alone-dissociate.jpg",
-        "caption": "Fig. 07 | Second graphic"
+        "caption": "Fig. 08 | Second graphic"
       }
     ]
   },

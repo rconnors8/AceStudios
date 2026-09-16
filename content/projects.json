@@ -644,13 +644,16 @@
       },
       {
         "src": "assets/img/ranch-heritage-lawrence.jpg",
-        "caption": "Fig. 06 | Heritage print, Lawrence Bennett"
+        "caption": "Fig. 06 | Heritage print, Lawrence Bennett",
+        "inset": false
       },
       {
         "src": "assets/img/ranch-heritage-willis.jpg",
-        "caption": "Fig. 07 | Heritage print, Willis Bennett"
+        "caption": "Fig. 07 | Heritage print, Willis Bennett",
+        "inset": false
       }
     ],
-    "mark": true
+    "mark": true,
+    "plate_inset": true
   }
 ]

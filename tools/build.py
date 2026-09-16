@@ -251,6 +251,18 @@ def plate_media(pl, prefix="../"):
             % (poster, alt)) + "".join(srcs) + "</video>"
 
 
+def plate_extra(p, pl):
+    """Per-plate layout flags.
+
+    A project can ask for every plate to be matted with `plate_inset`; a single
+    plate can opt in or out with its own `inset` key.
+    """
+    bits = " plate--full" if pl.get("full") else ""
+    if pl.get("inset", p.get("plate_inset")):
+        bits += " plate--inset"
+    return bits
+
+
 def specimen_block(p):
     """The working type set: live samples you can resize and type into."""
     specs = p.get("specimens") or []
@@ -357,7 +369,7 @@ def project_page(p, nxt):
     plate_block = ""
     if plates:
         cells = "\n".join(
-            f'''      <div class="plate{pcls}{' plate--full' if pl.get('full') else ''} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}>{plate_media(pl)}<p class="plate__cap">{pl.get('caption', '')}</p></div>'''
+            f'''      <div class="plate{pcls}{plate_extra(p, pl)} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}>{plate_media(pl)}<p class="plate__cap">{pl.get('caption', '')}</p></div>'''
             for i, pl in enumerate(plates))
         plate_block = f'''
   <section class="wrap section--tight">

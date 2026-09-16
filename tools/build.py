@@ -219,6 +219,14 @@ def plate_media(pl, prefix="../"):
 
 def project_page(p, nxt):
     pcls, pbg = fit_bits(p, "plate")
+    # The opening image can be a clip. It reuses the plate media builder, so it
+    # gets the same dual sources and the same playback handling as the rest.
+    if p.get("hero_video"):
+        hero_media = plate_media({"video": p["hero_video"],
+                                  "poster": p.get("wide"),
+                                  "caption": p["title"]})
+    else:
+        hero_media = plate_media({"src": wide_of(p), "caption": p["title"] + " | key image"})
     paras = "\n          ".join(f"<p>{para}</p>" for para in p.get("body", []))
     prose = f'''      <div style="grid-column: 6 / span 7" class="reveal prose" data-delay="80">
           {paras}
@@ -276,7 +284,7 @@ def project_page(p, nxt):
 
   <section class="wrap">
     <div class="plate{pcls} reveal"{pbg}>
-      <img src="../{wide_of(p)}" alt="{esc(p['title'])} | key image">
+      {hero_media}
     </div>
   </section>
 

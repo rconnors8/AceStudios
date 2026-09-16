@@ -438,21 +438,17 @@
         "caption": "Fig. 02 | Short ident"
       },
       {
-        "video": "assets/img/motion-nb.mp4",
-        "poster": "assets/img/motion-nb-poster.jpg",
-        "caption": "Fig. 03 | Vertical loop"
-      },
-      {
         "video": "assets/img/motion-loop.mp4",
         "poster": "assets/img/motion-loop-poster.jpg",
-        "caption": "Fig. 04 | Square loop"
+        "caption": "Fig. 03 | Square loop"
       },
       {
         "video": "assets/img/motion-still-life.mp4",
         "poster": "assets/img/motion-still-life-poster.jpg",
-        "caption": "Fig. 05 | Loop"
+        "caption": "Fig. 04 | Loop"
       }
-    ]
+    ],
+    "hero_video": "assets/img/motion-nb.mp4"
   },
   {
     "slug": "type-studies",

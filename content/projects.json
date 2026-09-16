@@ -312,24 +312,20 @@
     "fit": "contain",
     "bg": "#0b0b0c",
     "cover": "assets/img/simply-alone-front.jpg",
-    "wide": "assets/img/simply-alone-back.jpg",
+    "wide": "assets/img/simply-alone-grey.jpg",
     "services": "Apparel graphics, Lettering",
-    "deliverables": "Hoodie graphics, front and back",
-    "lede": "A hoodie capsule carrying a quiet wordmark and a back print that says more than the front.",
+    "deliverables": "Hoodie graphics, two colourways",
+    "lede": "A hoodie capsule built on one quiet wordmark, held small enough to read as a label rather than a slogan.",
     "body": [
-      "The front is held deliberately small: a stacked wordmark with a rule under it, sized so it reads as a label rather than a slogan.",
-      "The back takes the room. A wide lockup with the studio name and a script tail, set to sit across the shoulders, so the piece works from behind at a distance.",
-      "A second graphic runs looser - layered type and a drawn ellipse over a washed brown body, printed soft so it reads as something already worn in."
+      "The graphic is held deliberately small. A stacked wordmark with a rule under it, sized and placed so it reads as a garment label rather than something shouting across a room.",
+      "The lockup does its work with weight rather than scale: a heavy sans for the name, a lighter cut for the sub-line, and a year set in script running through both. Three weights in a graphic barely six inches wide, which is what keeps it legible without getting louder.",
+      "A second piece runs looser - layered type and a drawn ellipse over a washed brown body, printed soft so it reads as something already worn in rather than new."
     ],
-    "quote": "The front reads as a label. The back takes the room.",
+    "quote": "Held small enough to read as a label, not a slogan.",
     "plates": [
       {
-        "src": "assets/img/simply-alone-grey.jpg",
-        "caption": "Fig. 01 | Grey colourway"
-      },
-      {
         "src": "assets/img/simply-alone-dissociate.jpg",
-        "caption": "Fig. 02 | Second graphic"
+        "caption": "Fig. 01 | Second graphic"
       }
     ]
   },

@@ -323,5 +323,100 @@
         "caption": "Fig. 01 | Shorts, tonal colourway"
       }
     ]
+  },
+  {
+    "slug": "music-posters",
+    "title": "Music Posters",
+    "sub": "Poster series",
+    "year": "2024",
+    "tags": [
+      "print",
+      "typography",
+      "advertising"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#141416",
+    "cover": "assets/img/poster-lucki.jpg",
+    "wide": "assets/img/poster-tyler.jpg",
+    "services": "Art direction, Poster design, Typography",
+    "deliverables": "Nine posters at 18x24 and 20x30",
+    "lede": "A run of artist posters at two print sizes, each built from its own typographic idea rather than a house template.",
+    "body": [
+      "The set is deliberately not a system. One sheet is blown out to pure black and white with the grain left in, one runs a chrome display face across a split field, one interleaves the figure between stacked letterforms so the type sits both behind and in front.",
+      "Each poster carries its own information layer - tour dates set vertically down the edge, a discography line across the foot, a block of body copy justified under the title. The type does the work a caption would otherwise have to do.",
+      "Printed at 18x24 and 20x30, with the scale set from the largest viewing distance down: the name reads across a room, the small copy only pays off up close.",
+      "<strong>Self-initiated.</strong> These are personal poster studies of artists I listen to. They were not commissioned, and they are not affiliated with or endorsed by the artists."
+    ],
+    "quote": "Format and intent hold them together, not a shared grid.",
+    "plates": [
+      {
+        "src": "assets/img/poster-jpegmafia.jpg",
+        "caption": "Fig. 01 | Tour poster, 20x30"
+      },
+      {
+        "src": "assets/img/poster-lucki.jpg",
+        "caption": "Fig. 02 | High-contrast study, 18x24"
+      },
+      {
+        "src": "assets/img/poster-sui-boys.jpg",
+        "caption": "Fig. 03 | 20x30"
+      },
+      {
+        "src": "assets/img/poster-ramirez.jpg",
+        "caption": "Fig. 04 | 20x30"
+      },
+      {
+        "src": "assets/img/poster-jean-dawson.jpg",
+        "caption": "Fig. 05 | Show poster, two colour"
+      },
+      {
+        "src": "assets/img/poster-mac-miller.jpg",
+        "caption": "Fig. 06 | 18x24"
+      },
+      {
+        "src": "assets/img/poster-red-hot.jpg",
+        "caption": "Fig. 07 | 18x24"
+      },
+      {
+        "src": "assets/img/poster-jimi-hendrix.jpg",
+        "caption": "Fig. 08 | 18x24"
+      }
+    ]
+  },
+  {
+    "slug": "screen-posters",
+    "title": "Screen Posters",
+    "sub": "Alternative poster series",
+    "year": "2024",
+    "tags": [
+      "print",
+      "typography"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#141416",
+    "cover": "assets/img/screen-the-boys.jpg",
+    "wide": "assets/img/screen-joker.jpg",
+    "services": "Art direction, Poster design, Typography",
+    "deliverables": "Four posters at 18x24 and 20x30",
+    "lede": "Alternative posters for four titles, all built on one two-colour system.",
+    "body": [
+      "Where the music posters are deliberately unalike, these run to a single set of rules: two inks, a coarse halftone, a panel grid, and a synopsis justified across the foot.",
+      "Holding every title to the same structure moves the work into the edit - which frames get chosen, how the panels are weighted against each other, and where the title block is allowed to break the grid it sits in.",
+      "The halftone is set coarse on purpose. At poster size the dot is visible from a normal viewing distance, which keeps the source footage reading as print rather than as a screenshot.",
+      "<strong>Self-initiated.</strong> Unofficial poster studies made as personal work. They are not affiliated with, licensed by, or endorsed by the rights holders of the titles shown."
+    ],
+    "quote": "Two inks and one grid, so the differences land in the edit.",
+    "plates": [
+      {
+        "src": "assets/img/screen-spiderman.jpg",
+        "caption": "Fig. 01 | 18x24"
+      },
+      {
+        "src": "assets/img/screen-baki-hanma.jpg",
+        "caption": "Fig. 02 | 20x30"
+      }
+    ]
   }
 ]

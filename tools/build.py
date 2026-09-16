@@ -32,12 +32,16 @@ GRID_END = "<!-- BUILD:work-grid:end -->"
 # Home page sections, in order. A project lands in the first one it matches,
 # so nothing is listed twice.
 # Slugs that should lead their section, whatever the date sort says.
+# Full identity programmes, named rather than inferred from a tag.
+IDENTITY_WORK = ("rocking-b-ranch",)
+
 SECTION_LEAD = {"posters": ["music-posters"]}
 
 # How many cards each home section may show. The home page is a door, not an index.
-HOME_MAX = {"type": 1, "posters": 2, "other": 2}
+HOME_MAX = {"identity": 2, "type": 1, "posters": 2, "other": 2}
 
 HOME_SECTIONS = [
+    ("identity", lambda p: p["slug"] in IDENTITY_WORK, True),
     ("apparel", lambda p: "apparel" in p.get("tags", []), False),
     ("type",    lambda p: p["slug"] == "type-studies", True),
     ("posters", lambda p: p["slug"] in ("music-posters", "screen-posters"), True),
@@ -286,9 +290,40 @@ def specimen_block(p):
     return head, body
 
 
+def palette_block(p):
+    """Colour palette: chip, name, hex, and what the colour is actually for."""
+    swatches = p.get("palette") or []
+    if not swatches:
+        return ""
+    chips = []
+    for s in swatches:
+        chips.append(f'''          <div class="swatch">
+            <span class="swatch__chip" style="background:{s["hex"]}"></span>
+            <p class="swatch__name">{esc(s["name"])}</p>
+            <p class="swatch__hex">{esc(s["hex"]).upper()}</p>
+            <p class="swatch__note">{s.get("note", "")}</p>
+          </div>''')
+    return '''
+  <section class="wrap section rule-top" id="palette">
+    <div class="grid">
+      <div style="grid-column: 1 / span 4" class="reveal">
+        <p class="eyebrow">Palette</p>
+        <p class="specimen__note" style="margin-top:14px">''' + p.get("palette_note", "") + '''</p>
+      </div>
+      <div style="grid-column: 5 / span 8" class="reveal" data-delay="80">
+        <div class="swatches">
+''' + "\n".join(chips) + '''
+        </div>
+      </div>
+    </div>
+  </section>
+'''
+
+
 def project_page(p, nxt):
     pcls, pbg = fit_bits(p, "plate")
     spec_head, spec_body = specimen_block(p)
+    palette = palette_block(p)
     # The opening image can be a clip. It reuses the plate media builder, so it
     # gets the same dual sources and the same playback handling as the rest.
     if p.get("hero_video"):
@@ -369,7 +404,7 @@ def project_page(p, nxt):
 {prose}
     </div>
   </section>
-{quote}{plate_block}{nxt_block}'''
+{quote}{palette}{plate_block}{nxt_block}'''
 
     b = "../"
     desc = (p.get("lede") or f"{p['title']} | {p.get('sub', '')}").replace('"', "'")
@@ -410,15 +445,16 @@ def build():
                            collection_card("apparel.html", "assets/img/lacuna-lookbook.jpg",
                                            "Clothing & Merch",
                                            "Hoodies, tees, team apparel",
-                                           "%d projects" % len(picked)))
+                                           "%d projects" % len([q for q in projects if "apparel" in q.get("tags", [])])))
+            wearables = [q for q in projects if "apparel" in q.get("tags", [])]
             replace_region("apparel.html",
                            "<!-- BUILD:apparel-page:start -->", "<!-- BUILD:apparel-page:end -->",
-                           "\n".join(card(p) for p in picked))
+                           "\n".join(card(q) for q in wearables))
             ap = os.path.join(ROOT, "apparel.html")
             src = open(ap).read()
             open(ap, "w").write(re.sub(r"(<span data-count>)\d+(</span>)",
-                                       r"\g<1>%02d\g<2>" % len(picked), src))
-            print("  home/apparel  1 card -> apparel.html (%d projects)" % len(picked))
+                                       r"\g<1>%02d\g<2>" % len(wearables), src))
+            print("  home/apparel  1 card -> apparel.html (%d projects)" % len(wearables))
             continue
 
         picked = picked[:HOME_MAX.get(marker, 2)]

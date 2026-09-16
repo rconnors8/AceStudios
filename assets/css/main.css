@@ -370,6 +370,20 @@ a.list__row:hover { padding-left: 14px; color: var(--accent); }
   font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--paper-dim);
 }
 
+/* ---------- colour palette ---------- */
+
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: clamp(16px, 2vw, 26px); }
+.swatch__chip {
+  display: block; width: 100%; aspect-ratio: 4 / 5;
+  border: 1px solid var(--ink-line); border-radius: 2px;
+}
+.swatch__name { font-size: .95rem; font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 0; }
+.swatch__hex {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .12em;
+  color: var(--paper-dim); margin: 4px 0 0;
+}
+.swatch__note { font-size: .82rem; line-height: 1.45; color: #d9d6cf; margin: 8px 0 0; }
+
 /* ---------- type specimens ---------- */
 
 .specimen { border-top: var(--rule); padding-block: clamp(26px, 4vw, 42px); }

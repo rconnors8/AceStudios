@@ -532,5 +532,97 @@
         "caption": "Fig. 02 | Collection artwork"
       }
     ]
+  },
+  {
+    "slug": "rocking-b-ranch",
+    "title": "Rocking B Ranch",
+    "sub": "Brand identity",
+    "year": "2025",
+    "tags": [
+      "identity",
+      "apparel",
+      "typography"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#ffffff",
+    "cover": "assets/img/ranch-tee-oxblood.jpg",
+    "wide": "assets/img/ranch-lockup-oxblood.jpg",
+    "client": "Rocking B Ranch",
+    "sector": "Hospitality &mdash; trail riding, Lake George NY",
+    "services": "Brand identity, Logo design, Apparel graphics, Typography",
+    "deliverables": "Primary lockup, secondary marks, two colourways, apparel range",
+    "lede": "An identity for a Lake George trail-riding ranch working since 1942, built to look like it has been there the whole time.",
+    "body": [
+      "A ranch trading on eighty years of history cannot have an identity that looks new. The whole system is drawn from what a working ranch would already own: a hand-set arch, a rider traced from the archive, a slab wordmark that could have been painted on a barn door.",
+      "The primary lockup arches MOUNTAIN VIEW around a rider with a lasso, with ROCKING B RANCH set into the horse. It is drawn as one piece rather than type placed over an illustration, so it prints as a single screen and holds together on a chest at six inches or a sign at six feet.",
+      "Two colourways carry the range. An oxblood that reads as old print on white cotton, and a navy set in a lighter script for the pieces that need to feel less like workwear. Both are one ink on one ground, which keeps a small range affordable to print.",
+      "The heritage pieces go further. Archive photographs of named riders - Lawrence and Willis Bennett - are set in a framed panel with the region and the year, so a shirt reads as a document rather than a souvenir."
+    ],
+    "quote": "A ranch trading on eighty years cannot have an identity that looks new.",
+    "palette_note": "Print inks sampled from the artwork. Bone and ink are the ranch's existing web palette, which the printed system sits alongside rather than replacing.",
+    "palette": [
+      {
+        "name": "Oxblood",
+        "hex": "#642627",
+        "note": "Primary ink. One screen on white cotton for the arched lockup."
+      },
+      {
+        "name": "Navy",
+        "hex": "#23224E",
+        "note": "Second colourway, paired with the lighter script lockup."
+      },
+      {
+        "name": "Espresso",
+        "hex": "#281912",
+        "note": "Wordmark and rules. Nearly black, still warm."
+      },
+      {
+        "name": "Bone",
+        "hex": "#EEEAE1",
+        "note": "The ranch's web ground. Warm enough to keep the photography from going cold."
+      },
+      {
+        "name": "Ink",
+        "hex": "#292520",
+        "note": "Body and display text on bone."
+      },
+      {
+        "name": "Washed Grey",
+        "hex": "#736F6C",
+        "note": "Garment colour for the heritage prints."
+      }
+    ],
+    "plates": [
+      {
+        "src": "assets/img/ranch-lockup-navy.jpg",
+        "caption": "Fig. 01 | Script lockup, navy colourway"
+      },
+      {
+        "src": "assets/img/ranch-mark-bronco.jpg",
+        "caption": "Fig. 02 | Secondary mark"
+      },
+      {
+        "src": "assets/img/ranch-wordmark.jpg",
+        "caption": "Fig. 03 | Wordmark",
+        "full": true
+      },
+      {
+        "src": "assets/img/ranch-tee-oxblood.jpg",
+        "caption": "Fig. 04 | Applied, oxblood"
+      },
+      {
+        "src": "assets/img/ranch-tee-navy.jpg",
+        "caption": "Fig. 05 | Applied, navy"
+      },
+      {
+        "src": "assets/img/ranch-heritage-lawrence.jpg",
+        "caption": "Fig. 06 | Heritage print, Lawrence Bennett"
+      },
+      {
+        "src": "assets/img/ranch-heritage-willis.jpg",
+        "caption": "Fig. 07 | Heritage print, Willis Bennett"
+      }
+    ]
   }
 ]

@@ -33,7 +33,7 @@ GRID_END = "<!-- BUILD:work-grid:end -->"
 # so nothing is listed twice.
 # Slugs that should lead their section, whatever the date sort says.
 # Full identity programmes, named rather than inferred from a tag.
-IDENTITY_WORK = ("rocking-b-ranch",)
+IDENTITY_WORK = ("rocking-b-ranch", "simply-alone")
 
 SECTION_LEAD = {"posters": ["music-posters"]}
 

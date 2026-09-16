@@ -261,30 +261,57 @@
   {
     "slug": "simply-alone",
     "title": "Simply Alone Studios",
-    "sub": "Hoodie capsule",
+    "sub": "Brand &amp; campaign",
     "year": "2024",
     "tags": [
       "apparel",
+      "advertising",
+      "identity",
       "typography"
     ],
     "featured": false,
     "fit": "contain",
     "bg": "#0b0b0c",
     "cover": "assets/img/simply-alone-front.jpg",
-    "wide": "assets/img/simply-alone-grey.jpg",
-    "services": "Apparel graphics, Lettering",
-    "deliverables": "Hoodie graphics, two colourways",
-    "lede": "A hoodie capsule built on one quiet wordmark, held small enough to read as a label rather than a slogan.",
+    "wide": "assets/img/sa-ad-growth.jpg",
+    "services": "Brand identity, Campaign, Apparel graphics, Art direction",
+    "deliverables": "Hoodie graphics, campaign, product and cause messaging",
+    "lede": "A hoodie built around one quiet wordmark, and the campaign that had to carry both a product and a reason for it to exist.",
     "body": [
       "The graphic is held deliberately small. A stacked wordmark with a rule under it, sized and placed so it reads as a garment label rather than something shouting across a room.",
       "The lockup does its work with weight rather than scale: a heavy sans for the name, a lighter cut for the sub-line, and a year set in script running through both. Three weights in a graphic barely six inches wide, which is what keeps it legible without getting louder.",
-      "A second piece runs looser - layered type and a drawn ellipse over a washed brown body, printed soft so it reads as something already worn in rather than new."
+      "The campaign had a harder job. The drop raises money for suicide prevention programmes, so every piece has to sell a sixteen ounce hoodie and say something true at the same time, without letting either one cheapen the other.",
+      "The answer was to separate the two jobs rather than blend them. The product frames do product work, plainly: the weight of the fabric, the price, the free shipping, callouts pointing at what you are actually buying. The message frames stay quiet and give the cause its own room. Struggle creates growth set around a bare tree. A beautiful world under a concrete underpass. Nothing is dressed up as more than it is."
     ],
-    "quote": "Held small enough to read as a label, not a slogan.",
+    "quote": "Sell the hoodie plainly. Give the reason its own room. Never let one dress up the other.",
     "plates": [
       {
+        "src": "assets/img/sa-ad-beautiful-world.jpg",
+        "caption": "Fig. 01 | Campaign"
+      },
+      {
+        "src": "assets/img/sa-ad-awareness.jpg",
+        "caption": "Fig. 02 | Awareness frame"
+      },
+      {
+        "src": "assets/img/sa-ad-hoodie.jpg",
+        "caption": "Fig. 03 | Product frame"
+      },
+      {
+        "src": "assets/img/sa-ad-spec.jpg",
+        "caption": "Fig. 04 | Specification frame"
+      },
+      {
+        "src": "assets/img/sa-ad-proceeds.jpg",
+        "caption": "Fig. 05 | Cause frame"
+      },
+      {
+        "src": "assets/img/simply-alone-grey.jpg",
+        "caption": "Fig. 06 | Grey colourway"
+      },
+      {
         "src": "assets/img/simply-alone-dissociate.jpg",
-        "caption": "Fig. 01 | Second graphic"
+        "caption": "Fig. 07 | Second graphic"
       }
     ]
   },

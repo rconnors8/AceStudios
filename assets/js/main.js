@@ -156,7 +156,9 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = new FormData(form);
-      var subject = 'New project enquiry - ' + (data.get('company') || data.get('name') || 'Untitled');
+      var who = data.get('company') || data.get('name') || 'Untitled';
+      var source = form.getAttribute('data-source');
+      var subject = (source ? source + ' - ' : 'New project enquiry - ') + who;
       var body = [
         'Name: ' + (data.get('name') || ''),
         'Company: ' + (data.get('company') || ''),
@@ -166,11 +168,11 @@
         '',
         data.get('message') || ''
       ].join('\n');
-      window.location.href = 'mailto:studio@acestudios.design'
+      window.location.href = 'mailto:acestudios.r@gmail.com'
         + '?subject=' + encodeURIComponent(subject)
         + '&body=' + encodeURIComponent(body);
       var note = form.querySelector('[data-form-note]');
-      if (note) note.textContent = 'Opening your mail client - if nothing happens, write to studio@acestudios.design directly.';
+      if (note) note.textContent = 'Opening your mail client - if nothing happens, write to acestudios.r@gmail.com directly.';
     });
   }
 })();

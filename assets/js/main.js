@@ -39,6 +39,15 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---- looping video: hand control back under reduced motion ---- */
+  if (reduce) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.setAttribute('controls', '');
+      v.pause();
+    });
+  }
+
   /* ---- work filters ---- */
   var filters = document.querySelectorAll('[data-filter]');
   var items = document.querySelectorAll('[data-tags]');

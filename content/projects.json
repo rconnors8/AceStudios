@@ -326,7 +326,7 @@
   },
   {
     "slug": "music-posters",
-    "title": "Music Posters",
+    "title": "Music & Culture Posters",
     "sub": "Poster series",
     "year": "2024",
     "tags": [
@@ -340,7 +340,7 @@
     "cover": "assets/img/poster-lucki.jpg",
     "wide": "assets/img/poster-tyler.jpg",
     "services": "Art direction, Poster design, Typography",
-    "deliverables": "Nine posters at 18x24 and 20x30",
+    "deliverables": "Twelve posters at 18x24 and 20x30",
     "lede": "A run of artist posters at two print sizes, each built from its own typographic idea rather than a house template.",
     "body": [
       "The set is deliberately not a system. One sheet is blown out to pure black and white with the grain left in, one runs a chrome display face across a split field, one interleaves the figure between stacked letterforms so the type sits both behind and in front.",
@@ -381,6 +381,35 @@
       {
         "src": "assets/img/poster-jimi-hendrix.jpg",
         "caption": "Fig. 08 | 18x24"
+      },
+      {
+        "src": "assets/img/poster-deftones.jpg",
+        "caption": "Fig. 09 | Framed, 18x24"
+      },
+      {
+        "src": "assets/img/poster-beatles.jpg",
+        "caption": "Fig. 10 | Framed, 18x24"
+      },
+      {
+        "src": "assets/img/poster-ali.jpg",
+        "caption": "Fig. 11 | Framed, 20x30"
+      },
+      {
+        "src": "assets/img/poster-lucki-green.jpg",
+        "caption": "Fig. 12 | Two-colour variant"
+      },
+      {
+        "src": "assets/img/poster-lucki-framed.jpg",
+        "caption": "Fig. 13 | Framed"
+      },
+      {
+        "src": "assets/img/poster-mac-framed.jpg",
+        "caption": "Fig. 14 | Framed"
+      },
+      {
+        "src": "assets/img/poster-lucki-room.jpg",
+        "caption": "Fig. 15 | In situ",
+        "full": true
       }
     ]
   },
@@ -416,7 +445,237 @@
       {
         "src": "assets/img/screen-baki-hanma.jpg",
         "caption": "Fig. 02 | 20x30"
+      },
+      {
+        "src": "assets/img/screen-joker-framed.jpg",
+        "caption": "Fig. 03 | Framed"
+      },
+      {
+        "src": "assets/img/screen-the-boys-framed.jpg",
+        "caption": "Fig. 04 | Framed"
+      },
+      {
+        "src": "assets/img/poster-baki-framed.jpg",
+        "caption": "Fig. 05 | Framed"
       }
     ]
+  },
+  {
+    "slug": "team-apparel",
+    "title": "Team & Club Apparel",
+    "sub": "Screen-printed merch",
+    "year": "2024",
+    "tags": [
+      "apparel",
+      "identity"
+    ],
+    "featured": true,
+    "fit": "contain",
+    "bg": "#ffffff",
+    "cover": "assets/img/team-shen-tee.jpg",
+    "wide": "assets/img/team-hvcc-golf.jpg",
+    "services": "Apparel graphics, Logo design",
+    "deliverables": "Tees for three organisations, badge marks",
+    "lede": "Shirts for a college honours programme, a wildlife society and a high school volleyball season.",
+    "body": [
+      "Team merch has a harder brief than it looks. It has to name the organisation, the event and the year, survive one screen-print colour, and still be something a person will wear when the season is over.",
+      "Each mark is built as a badge that works standing alone: an oval lockup for the volleyball season, a halftone crest for the golf classic, and a stacked monogram for the wildlife society that opens up into a full illustration on the back.",
+      "All three are drawn for a single screen on a garment-dyed blank, which keeps a run affordable for a club paying out of its own budget."
+    ],
+    "quote": "It has to survive one screen-print colour and still be worn after the season.",
+    "plates": [
+      {
+        "src": "assets/img/team-shen-mark.jpg",
+        "caption": "Fig. 01 | Volleyball season mark"
+      },
+      {
+        "src": "assets/img/team-psc-front.jpg",
+        "caption": "Fig. 02 | Wildlife society, front"
+      },
+      {
+        "src": "assets/img/team-psc-back.jpg",
+        "caption": "Fig. 03 | Wildlife society, back"
+      }
+    ]
+  },
+  {
+    "slug": "simply-alone",
+    "title": "Simply Alone Studios",
+    "sub": "Hoodie capsule",
+    "year": "2024",
+    "tags": [
+      "apparel",
+      "typography"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#0b0b0c",
+    "cover": "assets/img/simply-alone-front.jpg",
+    "wide": "assets/img/simply-alone-back.jpg",
+    "services": "Apparel graphics, Lettering",
+    "deliverables": "Hoodie graphics, front and back",
+    "lede": "A hoodie capsule carrying a quiet wordmark and a back print that says more than the front.",
+    "body": [
+      "The front is held deliberately small: a stacked wordmark with a rule under it, sized so it reads as a label rather than a slogan.",
+      "The back takes the room. A wide lockup with the studio name and a script tail, set to sit across the shoulders, so the piece works from behind at a distance.",
+      "A second graphic runs looser - layered type and a drawn ellipse over a washed brown body, printed soft so it reads as something already worn in."
+    ],
+    "quote": "The front reads as a label. The back takes the room.",
+    "plates": [
+      {
+        "src": "assets/img/simply-alone-grey.jpg",
+        "caption": "Fig. 01 | Grey colourway"
+      },
+      {
+        "src": "assets/img/simply-alone-dissociate.jpg",
+        "caption": "Fig. 02 | Second graphic"
+      }
+    ]
+  },
+  {
+    "slug": "rhinestone-cowboy",
+    "title": "Rhinestone Cowboy",
+    "sub": "Tee graphics",
+    "year": "2024",
+    "tags": [
+      "apparel",
+      "typography"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#0b0b0c",
+    "cover": "assets/img/rhinestone-front.jpg",
+    "wide": "assets/img/rhinestone-pair.jpg",
+    "services": "Apparel graphics, Lettering",
+    "deliverables": "Tee graphics, front and back",
+    "lede": "One red ink, a drawn rider, and a wordmark that splits serif against script.",
+    "body": [
+      "The lockup sets a spurred serif over a looping script, so the two halves of the name pull against each other the way the phrase does.",
+      "The rider is drawn as an open line illustration and printed in the same single red, which lets it run large across the front and then wrap small around the hip on the back without a second screen.",
+      "Held to one ink on white throughout, so the whole capsule prints in a single pass."
+    ],
+    "quote": "One ink, one pass, and the drawing still carries it.",
+    "plates": [
+      {
+        "src": "assets/img/rhinestone-back.jpg",
+        "caption": "Fig. 01 | Back and hip print"
+      }
+    ]
+  },
+  {
+    "slug": "album-art",
+    "title": "Album Art",
+    "sub": "Covers & packaging",
+    "year": "2024",
+    "tags": [
+      "print",
+      "identity",
+      "typography"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#141416",
+    "cover": "assets/img/album-angels.jpg",
+    "wide": "assets/img/album-sycamore.jpg",
+    "services": "Art direction, Cover design, Typography",
+    "deliverables": "Five covers",
+    "lede": "Covers built to survive being shrunk to a thumbnail without losing what they are.",
+    "body": [
+      "A cover now lives at two sizes that could not be further apart: a 3000px master and a postage stamp in a streaming queue. Everything here is designed at the small size first and then allowed to reward the large one.",
+      "That means one dominant shape per cover - a rose, a vortex, a single blown-out figure - with the type either cut into it or held well clear of it, never competing at thumbnail size.",
+      "Texture does the rest. Scanned grain, torn edges and heavy contrast give each sleeve a physical read that a clean digital render would not have."
+    ],
+    "quote": "Designed at thumbnail size first, then allowed to reward the large one.",
+    "plates": [
+      {
+        "src": "assets/img/album-bw.jpg",
+        "caption": "Fig. 01 | High-contrast cover"
+      },
+      {
+        "src": "assets/img/album-perry.jpg",
+        "caption": "Fig. 02 | Cover"
+      },
+      {
+        "src": "assets/img/album-sycamore-alt.jpg",
+        "caption": "Fig. 03 | Alternate cover"
+      }
+    ]
+  },
+  {
+    "slug": "motion",
+    "title": "Motion",
+    "sub": "Animation & loops",
+    "year": "2025",
+    "tags": [
+      "motion",
+      "advertising",
+      "identity"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#0b0b0c",
+    "cover": "assets/img/motion-ace-mark-poster.jpg",
+    "wide": "assets/img/motion-nb-poster.jpg",
+    "services": "Motion design, Art direction",
+    "deliverables": "Studio idents, social loops",
+    "lede": "Short loops built for a feed: silent, square, and legible in the first half second.",
+    "body": [
+      "Everything here is cut to run under eight seconds and to work with the sound off, because that is how it will actually be seen. The first frame carries the whole idea; the motion is what makes you stop.",
+      "The studio idents are the test case - a mark that assembles and holds, short enough to sit in front of a piece of work without becoming an obstacle to it.",
+      "Exported silent and compressed hard. A loop that takes three seconds to load has already lost the person it was made for."
+    ],
+    "quote": "The first frame carries the idea. The motion is what makes you stop.",
+    "plates": [
+      {
+        "video": "assets/img/motion-ace-mark.mp4",
+        "poster": "assets/img/motion-ace-mark-poster.jpg",
+        "caption": "Fig. 01 | Studio ident"
+      },
+      {
+        "video": "assets/img/motion-ace-intro.mp4",
+        "poster": "assets/img/motion-ace-intro-poster.jpg",
+        "caption": "Fig. 02 | Short ident"
+      },
+      {
+        "video": "assets/img/motion-nb.mp4",
+        "poster": "assets/img/motion-nb-poster.jpg",
+        "caption": "Fig. 03 | Vertical loop"
+      },
+      {
+        "video": "assets/img/motion-loop.mp4",
+        "poster": "assets/img/motion-loop-poster.jpg",
+        "caption": "Fig. 04 | Square loop"
+      },
+      {
+        "video": "assets/img/motion-still-life.mp4",
+        "poster": "assets/img/motion-still-life-poster.jpg",
+        "caption": "Fig. 05 | Loop"
+      }
+    ]
+  },
+  {
+    "slug": "type-studies",
+    "title": "Type Studies",
+    "sub": "Poster experiments",
+    "year": "2024",
+    "tags": [
+      "typography",
+      "print"
+    ],
+    "featured": false,
+    "fit": "contain",
+    "bg": "#141416",
+    "cover": "assets/img/study-newgen.jpg",
+    "wide": "assets/img/study-explosion.jpg",
+    "services": "Typography, Poster design",
+    "deliverables": "Poster studies",
+    "lede": "Two sheets made to work a problem out rather than to sell anything.",
+    "body": [
+      "The first is a grid stress test: a single column of statements broken across weights and sizes until the hierarchy nearly collapses, then pulled back one step from the edge.",
+      "The second goes the other way - layered scans, halftone and torn paper with the type buried in it, to see how little of a word can still be read once the texture is fighting it.",
+      "Neither was briefed. They exist to find the limit, which is what makes them useful on the jobs that are briefed."
+    ],
+    "quote": "They exist to find the limit, which is what makes them useful on the jobs that are briefed.",
+    "plates": []
   }
 ]

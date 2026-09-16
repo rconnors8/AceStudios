@@ -33,7 +33,7 @@ FEAT_START = "<!-- BUILD:featured:start -->"
 FEAT_END = "<!-- BUILD:featured:end -->"
 
 # Filter buttons on work.html. Keep in sync with the tags you actually use.
-TAGS = ["identity", "apparel", "advertising", "web", "typography", "print"]
+TAGS = ["identity", "apparel", "advertising", "motion", "web", "typography", "print"]
 
 
 # --------------------------------------------------------------- page shell
@@ -193,6 +193,16 @@ def spec_rows(p):
     return "\n".join(out)
 
 
+def plate_media(pl, prefix="../"):
+    """A plate holds a still, or a silent looping video with a poster frame."""
+    alt = esc(pl.get("caption", ""))
+    if pl.get("video"):
+        poster = f' poster="{prefix}{pl["poster"]}"' if pl.get("poster") else ""
+        return (f'<video src="{prefix}{pl["video"]}"{poster} autoplay muted loop playsinline '
+                f'preload="metadata" aria-label="{alt}"></video>')
+    return f'<img src="{prefix}{pl["src"]}" alt="{alt}" loading="lazy">'
+
+
 def project_page(p, nxt):
     pcls, pbg = fit_bits(p, "plate")
     paras = "\n          ".join(f"<p>{para}</p>" for para in p.get("body", []))
@@ -217,7 +227,7 @@ def project_page(p, nxt):
     plate_block = ""
     if plates:
         cells = "\n".join(
-            f'''      <div class="plate{pcls}{' plate--full' if pl.get('full') else ''} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}><img src="../{pl['src']}" alt="{esc(pl.get('caption', p['title']))}" loading="lazy"><p class="plate__cap">{pl.get('caption', '')}</p></div>'''
+            f'''      <div class="plate{pcls}{' plate--full' if pl.get('full') else ''} reveal"{' data-delay="90"' if i % 2 else ''}{pbg}>{plate_media(pl)}<p class="plate__cap">{pl.get('caption', '')}</p></div>'''
             for i, pl in enumerate(plates))
         plate_block = f'''
   <section class="wrap section--tight">

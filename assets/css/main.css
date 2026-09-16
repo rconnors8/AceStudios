@@ -294,7 +294,7 @@ a { color: inherit; text-decoration: none; }
 .card__frame--contain img { object-fit: contain; }
 .card:hover .card__frame--contain img,
 .card:focus-visible .card__frame--contain img { transform: scale(1.02); }
-.plate--contain img { max-width: min(100%, 760px); margin-inline: auto; }
+.plate--contain img, .plate--contain video { max-width: min(100%, 760px); margin-inline: auto; }
 /* Banner-shaped artwork reads wrong at half width - let it span the row. */
 .plate--full { grid-column: 1 / -1; }
 
@@ -393,6 +393,6 @@ a.list__row:hover { padding-left: 14px; color: var(--accent); }
 .spec dt { font-family: var(--mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--paper-dim); margin: 0 0 6px; }
 .spec dd { margin: 0; font-size: .98rem; }
 .plate { border: var(--rule); background: var(--ink-soft); overflow: hidden; }
-.plate img { width: 100%; }
+.plate img, .plate video { display: block; width: 100%; height: auto; }
 .plate__cap { font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--paper-dim); padding: 12px 14px; border-top: var(--rule); }
 .pull { font-family: var(--serif); font-size: clamp(1.5rem, 4vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; max-width: 22ch; margin: 0; }

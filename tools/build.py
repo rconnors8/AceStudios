@@ -31,14 +31,29 @@ GRID_START = "<!-- BUILD:work-grid:start -->"
 GRID_END = "<!-- BUILD:work-grid:end -->"
 # Home page sections, in order. A project lands in the first one it matches,
 # so nothing is listed twice.
+# Slugs that should lead their section, whatever the date sort says.
+SECTION_LEAD = {"posters": ["music-posters"]}
+
 HOME_SECTIONS = [
-    ("posters", lambda p: p["slug"] in ("music-posters", "screen-posters"), True),
     ("apparel", lambda p: "apparel" in p.get("tags", []), False),
+    ("type",    lambda p: p["slug"] == "type-studies", True),
+    ("posters", lambda p: p["slug"] in ("music-posters", "screen-posters"), True),
     ("other",   lambda p: True, False),
 ]
 
 # Filter buttons on work.html. Keep in sync with the tags you actually use.
-TAGS = ["identity", "apparel", "advertising", "motion", "web", "typography", "print"]
+TAG_LABELS = [
+    ("identity", "Logos &amp; Identity"),
+    ("apparel", "Clothing"),
+    ("advertising", "Advertising"),
+    ("motion", "Motion"),
+    ("web", "Web"),
+    ("typography", "Typography"),
+    ("print", "Print"),
+]
+TAGS = [t for t, _ in TAG_LABELS]
+FILTER_START = "<!-- BUILD:filters:start -->"
+FILTER_END = "<!-- BUILD:filters:end -->"
 
 
 # --------------------------------------------------------------- page shell
@@ -332,6 +347,7 @@ def project_page(p, nxt):
     </div>
   </section>
 
+{spec_body}
   <section class="wrap section">
     <div class="grid">
       <div style="grid-column: 1 / span 4" class="reveal">
@@ -342,7 +358,7 @@ def project_page(p, nxt):
 {prose}
     </div>
   </section>
-{quote}{plate_block}{spec_body}{nxt_block}'''
+{quote}{plate_block}{nxt_block}'''
 
     b = "../"
     desc = (p.get("lede") or f"{p['title']} | {p.get('sub', '')}").replace('"', "'")
@@ -372,6 +388,8 @@ def build():
     for marker, belongs, wide in HOME_SECTIONS:
         picked = [p for p in remaining if belongs(p)]
         remaining = [p for p in remaining if p not in picked]
+        lead = SECTION_LEAD.get(marker, [])
+        picked.sort(key=lambda p: lead.index(p["slug"]) if p["slug"] in lead else len(lead))
         replace_region("index.html",
                        "<!-- BUILD:%s:start -->" % marker,
                        "<!-- BUILD:%s:end -->" % marker,
@@ -383,6 +401,19 @@ def build():
         if f.endswith(".html") and f[:-5] not in known:
             os.remove(os.path.join(ROOT, "work", f))
             print(f"removed stale page work/{f}")
+
+    live = set()
+    for p in projects:
+        live.update(p.get("tags", []))
+    buttons = ['      <button class="filter" data-filter="all" aria-pressed="true">All</button>']
+    for tag, label in TAG_LABELS:
+        if tag in live:
+            buttons.append('      <button class="filter" data-filter="%s" aria-pressed="false">%s</button>'
+                           % (tag, label))
+    replace_region("work.html", FILTER_START, FILTER_END, "\n".join(buttons))
+    dropped = [t for t, _ in TAG_LABELS if t not in live]
+    if dropped:
+        print("  filters hidden (no work yet): " + ", ".join(dropped))
 
     # keep the count on work.html honest
     wpath = os.path.join(ROOT, "work.html")

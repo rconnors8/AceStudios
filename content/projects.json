@@ -81,7 +81,7 @@
     "featured": false,
     "fit": "contain",
     "bg": "#141416",
-    "cover": "assets/img/poster-lucki.jpg",
+    "cover": "assets/img/poster-tyler.jpg",
     "wide": "assets/img/poster-tyler.jpg",
     "services": "Art direction, Poster design, Typography",
     "deliverables": "Sixteen posters at 18x24 and 20x30",
@@ -95,32 +95,32 @@
     "quote": "Format and intent hold them together, not a shared grid.",
     "plates": [
       {
-        "src": "assets/img/poster-jpegmafia.jpg",
-        "caption": "Fig. 01 | Tour poster, 20x30"
-      },
-      {
-        "src": "assets/img/poster-lucki.jpg",
-        "caption": "Fig. 02 | High-contrast study, 18x24"
-      },
-      {
-        "src": "assets/img/poster-sui-boys.jpg",
-        "caption": "Fig. 03 | 20x30"
-      },
-      {
-        "src": "assets/img/poster-ramirez.jpg",
-        "caption": "Fig. 04 | 20x30"
-      },
-      {
-        "src": "assets/img/poster-jean-dawson.jpg",
-        "caption": "Fig. 05 | Show poster, two colour"
-      },
-      {
         "src": "assets/img/poster-mac-miller.jpg",
-        "caption": "Fig. 06 | 18x24"
+        "caption": "Fig. 01 | Mac Miller"
       },
       {
         "src": "assets/img/poster-red-hot.jpg",
-        "caption": "Fig. 07 | 18x24"
+        "caption": "Fig. 02 | Red Hot Chili Peppers"
+      },
+      {
+        "src": "assets/img/poster-jpegmafia.jpg",
+        "caption": "Fig. 03 | Tour poster, 20x30"
+      },
+      {
+        "src": "assets/img/poster-lucki.jpg",
+        "caption": "Fig. 04 | High-contrast study, 18x24"
+      },
+      {
+        "src": "assets/img/poster-sui-boys.jpg",
+        "caption": "Fig. 05 | 20x30"
+      },
+      {
+        "src": "assets/img/poster-ramirez.jpg",
+        "caption": "Fig. 06 | 20x30"
+      },
+      {
+        "src": "assets/img/poster-jean-dawson.jpg",
+        "caption": "Fig. 07 | Show poster, two colour"
       },
       {
         "src": "assets/img/poster-jimi-hendrix.jpg",
